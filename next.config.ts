@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['brandslogos.com'], 
+    domains: ['brandslogos.com', 'encrypted-tbn0.gstatic.com', 'upload.wikimedia.org', 'sslcommerz.com', 'learnwithsumit.com'],
   },
+  reactStrictMode: true, 
 };
 
 module.exports = nextConfig;
