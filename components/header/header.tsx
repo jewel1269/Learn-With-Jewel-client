@@ -2,12 +2,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaSun, FaMoon, FaBars } from "react-icons/fa";
+import { FaSun, FaMoon, FaBars, FaCaretDown } from "react-icons/fa";
 import logo from "@/images/logo-removebg-preview.png";
 
 const Navbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   // Load saved theme from localStorage on component mount
   useEffect(() => {
@@ -25,6 +26,11 @@ const Navbar: React.FC = () => {
     setDarkMode(!darkMode);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark");
+  };
+
+  // Toggle dropdowns
+  const toggleDropdown = (dropdownName: string) => {
+    setActiveDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 
   return (
@@ -69,51 +75,106 @@ const Navbar: React.FC = () => {
         } w-full lg:flex lg:w-auto lg:items-center lg:gap-8`}
       >
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 mt-4 lg:mt-0">
-          <Link href="/">
-            <p className="hover:text-gray-400 transition cursor-pointer">হোম</p>
-          </Link>
-          <div className="relative group">
-            <button className="flex items-center gap-1 hover:text-gray-400 transition">
-              রিয়াক্ট এক্সপ্লোরার
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 9.75l3.75 3.75 3.75-3.75"
-                />
-              </svg>
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("courses")}
+              className="flex items-center gap-1 hover:text-gray-400 transition"
+            >
+              আমাদের সব কোর্স
+              <FaCaretDown />
             </button>
-            {/* Dropdown */}
-            <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-[#161b22] dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
-              <Link href="/course-details">
-                <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                  কোর্সের বিস্তারিত
-                </p>
-              </Link>
-              <Link href="/course-flow">
-                <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                  কোর্স ফ্লো দেখুন
-                </p>
-              </Link>
-              <Link href="/projects">
-                <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                  প্রজেক্টস
-                </p>
-              </Link>
-            </div>
+            {activeDropdown === "courses" && (
+              <div className="absolute left-0 mt-2 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
+                <Link href="/course-details">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    কোর্সের বিস্তারিত
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    কোর্স ফ্লো দেখুন
+                  </p>
+                </Link>
+                <Link href="/projects">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    প্রজেক্টস
+                  </p>
+                </Link>
+              </div>
+            )}
           </div>
-          <Link href="/blog">
-            <p className="hover:text-gray-400 transition cursor-pointer">
-              ব্লগ ইন এ রিঅ্যাক্ট থ্রো
-            </p>
-          </Link>
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("account")}
+              className="flex items-center gap-1 hover:text-gray-400 transition"
+            >
+              আমার অ্যাকাউন্ট
+              <FaCaretDown />
+            </button>
+            {activeDropdown === "account" && (
+              <div className="absolute left-0 mt-2 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
+                <Link href="/profile">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    প্রোফাইল
+                  </p>
+                </Link>
+                <Link href="/settings">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    কোর্সের বিস্তারিত
+                  </p>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("important")}
+              className="flex items-center gap-1 hover:text-gray-400 transition"
+            >
+              জরুরী
+              <FaCaretDown />
+            </button>
+            {activeDropdown === "important" && (
+              <div className="absolute w-40 left-0 mt-2 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
+                <Link href="/tarm">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    টার্মস এবং কন্ডিশনস
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    প্রাইভেসি পলিসি
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    রিফান্ড পলিসি
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    সাপোর্ট
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    প্রশ্নোত্তর
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    আমাদের সম্পর্কে
+                  </p>
+                </Link>
+                <Link href="/course-flow">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    যোগাযোগ
+                  </p>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Right Section: Buttons */}
