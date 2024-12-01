@@ -11,7 +11,7 @@ const AboutJewel = () => {
       </h2>
 
       <div>
-        <main className="bg-[#070d17] min-h-screen text-custom-text py-10">
+        <main className="bg-[#080d19] min-h-screen text-custom-text py-8">
           <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
             {/* Left Text Section */}
             <div className="lg:w-1/2">
@@ -69,6 +69,7 @@ const AboutJewel = () => {
               />
             </div>
           </section>
+          <hr className="lg:mt-20 blur-sm  brightness-110"/>
         </main>
       </div>
     </div>

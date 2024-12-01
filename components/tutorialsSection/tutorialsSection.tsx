@@ -5,7 +5,7 @@ import tutorial from "/images/j-removebg-preview.png"; // Path adjusted if the i
 
 const TutorialsSection: React.FC = () => {
   return (
-    <section className="bg-[#070d17] shadow-transparent shadow-lg text-white py-16">
+    <section className="bg-[#070d17] shadow-transparent shadow-lg text-white  py-16">
       <div className="container lg:flex justify-between mx-auto px-6">
         <div className="w-3/4">
           <Image
@@ -79,6 +79,22 @@ const TutorialsSection: React.FC = () => {
             </a>
           </div>
 
+          {/* Card 4 */}
+          <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+            <div className="text-center mb-4">
+              <FaCss3Alt className="text-blue-500 text-4xl mx-auto" />
+            </div>
+            <h3 className="text-xl font-medium text-center mb-2">Tailwind CSS</h3>
+            <p className="text-gray-400 mb-4 text-center ">
+              Tailwind CSS নিয়ে বাংলাদেশের প্রখ্যাত টিউটোরিয়াল
+            </p>
+            <a
+              href="#"
+              className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+            >
+              ভিডিও দেখুন
+            </a>
+          </div>
           {/* Card 4 */}
           <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
             <div className="text-center mb-4">
