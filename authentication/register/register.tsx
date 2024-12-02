@@ -26,10 +26,10 @@ const Register = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center">
+    <div className=" flex bg-[#070d17] flex-col items-center">
       {/* Header */}
       <div className="text-center mt-10 lg:mt-20">
-        <h2 className="text-3xl lg:text-4xl font-extrabold text-[#4fa0ec] mb-4 tracking-wide">
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 tracking-wide">
           <span className="text-green-500">নিবন্ধন</span> করুন
         </h2>
         <p className="text-md text-gray-400">
@@ -39,9 +39,9 @@ const Register = () => {
     <Toaster/>
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-10 px-4">
-        <div className="max-w-6xl w-full flex flex-col lg:flex-row bg-[#1a2235] rounded-lg shadow-2xl overflow-hidden">
+        <div className="max-w-6xl w-full flex justify-center flex-col lg:flex-row bg-[#1a2235] rounded-lg shadow-2xl overflow-hidden">
           {/* Left Side: Form */}
-          <div className="w-full lg:w-1/2 p-8 lg:p-10">
+          <div className=" p-8 lg:p-10">
             <form onSubmit={handleRegistration}>
               <div className="mb-6 ">
                 <label

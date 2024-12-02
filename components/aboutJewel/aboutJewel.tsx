@@ -24,7 +24,7 @@ const AboutJewel = () => {
                 প্রফেশনাল রিমোট প্রজেক্ট চালানো হয়েছে। লার্ন উইথ সুমিত কমিউনিটি
                 চালানো একটি জনপ্রিয় প্ল্যাটফর্ম।
               </p>
-              <p className="mt-4 font-medium">
+              <p className="mt-4 font-medium text-white">
                 <span className="text-green-500 font-bold">জুয়েল মিয়া</span>
                 <br />
                 প্রতিষ্ঠাতা - লার্ন উইথ জুয়েল

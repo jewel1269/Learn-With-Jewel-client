@@ -1,32 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaSun, FaMoon, FaBars, FaCaretDown } from "react-icons/fa";
+import { FaMoon, FaBars, FaCaretDown } from "react-icons/fa";
 import logo from "@/images/logo-removebg-preview.png";
+import { useState } from "react";
 
 const Navbar: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  // Load saved theme from localStorage on component mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      const isDark = savedTheme === "dark";
-      setDarkMode(isDark);
-      if (isDark) document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  // Toggle theme and save it to localStorage
-  const toggleTheme = () => {
-    const newTheme = darkMode ? "light" : "dark";
-    setDarkMode(!darkMode);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark");
-  };
 
   // Toggle dropdowns
   const toggleDropdown = (dropdownName: string) => {
@@ -35,9 +17,9 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`${
-        darkMode ? "bg-[#0d1117] text-white" : "bg-gray-100 text-black"
-      } px-4 md:px-8 py-4 flex flex-wrap justify-around items-center`}
+      className={
+        "bg-[#070d17] text-white px-4 md:px-8 py-4 flex flex-wrap justify-around items-center"
+      }
     >
       {/* Left Section: Logo */}
       <div className="flex items-center gap-2">
@@ -69,11 +51,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Navigation Links */}
-      <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } w-full lg:flex lg:w-auto lg:items-center lg:gap-8`}
-      >
+      <div className={`w-full lg:flex lg:w-auto lg:items-center lg:gap-8`}>
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 mt-4 lg:mt-0">
           <div className="relative">
             <button
@@ -113,7 +91,7 @@ const Navbar: React.FC = () => {
             </button>
             {activeDropdown === "account" && (
               <div className="absolute left-0 mt-2 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
-                <Link href="/profile">
+                <Link href="/sidebars">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
                     প্রোফাইল
                   </p>
@@ -142,34 +120,19 @@ const Navbar: React.FC = () => {
                     টার্মস এবং কন্ডিশনস
                   </p>
                 </Link>
-                <Link href="/course-flow">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    প্রাইভেসি পলিসি
-                  </p>
-                </Link>
-                <Link href="/course-flow">
+                <Link href="/refand">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
                     রিফান্ড পলিসি
                   </p>
                 </Link>
-                <Link href="/course-flow">
+                <Link href="/support">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
                     সাপোর্ট
                   </p>
                 </Link>
-                <Link href="/course-flow">
+                <Link href="/faq">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
                     প্রশ্নোত্তর
-                  </p>
-                </Link>
-                <Link href="/course-flow">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    আমাদের সম্পর্কে
-                  </p>
-                </Link>
-                <Link href="/course-flow">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    যোগাযোগ
                   </p>
                 </Link>
               </div>
@@ -180,21 +143,12 @@ const Navbar: React.FC = () => {
         {/* Right Section: Buttons */}
         <div className="flex flex-col lg:flex-row items-center gap-4 mt-4 lg:mt-0">
           {/* Theme Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 bg-gray-700 dark:bg-gray-300 rounded-full hover:bg-gray-600 dark:hover:bg-gray-400"
-          >
-            {darkMode ? (
-              <FaSun className="text-yellow-400" />
-            ) : (
-              <FaMoon className="text-blue-400" />
-            )}
+          <button className="p-2 bg-gray-700 dark:bg-gray-300 rounded-full hover:bg-gray-600 dark:hover:bg-gray-400">
+            <FaMoon className="text-blue-400" />
           </button>
           <Link href="/login">
             <p
-              className={`${
-                darkMode ? "bg-[#238636]" : "bg-blue-600"
-              } px-3 py-1 rounded-full hover:bg-[#2ea043] dark:hover:bg-blue-700 transition`}
+              className={`px-3 py-1 rounded-full hover:bg-[#2ea043] dark:hover:bg-blue-700 transition`}
             >
               লগইন
             </p>

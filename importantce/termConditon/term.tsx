@@ -4,19 +4,19 @@ import React from "react";
 
 const Term = () => {
   return (
-    <div className="bg-gray-50 min-h-screen py-8 px-4 md:px-16">
+    <div className="bg-[#070d17] min-h-screen py-8 px-4 md:px-16">
       {/* Breadcrumb */}
-      <nav className="text-sm text-gray-600 mb-4">
-        <Link href="/" className="hover:underline text-red-500">
+      <nav className="text-sm text-white mb-4">
+        <Link href="/" className="hover:underline">
           হোম
         </Link>{" "}
-        &gt; <span>টেক্সট</span>
+        &gt; <span className="text-red-500">টেক্সট</span>
       </nav>
 
       {/* Title */}
       <header className="text-center mb-8">
         <h1 className="text-3xl font-bold text-red-500">টার্মস এবং কন্ডিশনস</h1>
-        <p className="text-gray-600 mt-2">
+        <p className="text-white mt-2">
           লার্ন উইথ জুয়েল এবং প্রতিশ্রুত স্বার্থান্বেষণ সম্পর্কে শিক্ষণ
         </p>
       </header>
