@@ -1,5 +1,5 @@
 import React from "react";
-import { FaJs, FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
+import { FaJs, FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaCuttlefish } from "react-icons/fa";
 import Image from "next/image"; // Import Image component from Next.js
 import tutorial from "/images/j-removebg-preview.png"; // Path adjusted if the image is in the public folder
 
@@ -28,90 +28,126 @@ const TutorialsSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-          {/* Card 1 */}
-          <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
-            <div className="text-center mb-4">
-              <FaJs className="text-yellow-500 text-4xl mx-auto" />
-            </div>
-            <h3 className="text-xl font-medium text-center mb-2">JavaScript</h3>
-            <p className="text-gray-400 text-center mb-4">
-              বিভিন্ন দিক থেকে সম্পূর্ণ ফ্রি মডার্ন জাভাস্ক্রিপ্ট কোর্স
-            </p>
-            <a
-              href="#"
-              className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1  rounded-2xl border-transparent hover:border-blue-600"
-            >
-              ভিডিও দেখুন
-            </a>
-          </div>
+  {/* Card 1 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaHtml5 className="text-orange-500 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">HTML</h3>
+    <p className="text-gray-400 text-center mb-4">
+      HTML শেখার জন্য সহজ ও কার্যকরী টিউটোরিয়াল।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
 
-          {/* Card 2 */}
-          <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
-            <div className="text-center mb-4">
-              <FaReact className="text-cyan-400 text-4xl mx-auto" />
-            </div>
-            <h3 className="text-xl font-medium text-center mb-2">React JS</h3>
-            <p className="text-gray-400 mb-4 text-center">
-              React.js ফ্রেমওয়ার্কের বেসিক থেকে অ্যাডভান্সড টিউটোরিয়াল
-            </p>
-            <a
-              href="#"
-              className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
-            >
-              ভিডিও দেখুন
-            </a>
-          </div>
+  {/* Card 2 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaCss3Alt className="text-blue-500 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">CSS</h3>
+    <p className="text-gray-400 mb-4 text-center">
+      CSS স্টাইলিংয়ের জন্য বেসিক থেকে অ্যাডভান্সড টিউটোরিয়াল।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
 
-          {/* Card 3 */}
-          <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
-            <div className="text-center mb-4">
-              <FaNodeJs className="text-green-600 text-4xl mx-auto" />
-            </div>
-            <h3 className="text-xl font-medium text-center mb-2">Node.js</h3>
-            <p className="text-gray-400 text-center mb-4">
-              Express Node & MongoDB চিটোটোরিয়াল
-            </p>
-            <a
-              href="#"
-              className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
-            >
-              ভিডিও দেখুন
-            </a>
-          </div>
+  {/* Card 3 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaJs className="text-yellow-500 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">JavaScript</h3>
+    <p className="text-gray-400 text-center mb-4">
+      বিভিন্ন দিক থেকে সম্পূর্ণ ফ্রি মডার্ন জাভাস্ক্রিপ্ট কোর্স।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
 
-          {/* Card 4 */}
-          <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
-            <div className="text-center mb-4">
-              <FaCss3Alt className="text-blue-500 text-4xl mx-auto" />
-            </div>
-            <h3 className="text-xl font-medium text-center mb-2">Tailwind CSS</h3>
-            <p className="text-gray-400 mb-4 text-center ">
-              Tailwind CSS নিয়ে বাংলাদেশের প্রখ্যাত টিউটোরিয়াল
-            </p>
-            <a
-              href="#"
-              className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
-            >
-              ভিডিও দেখুন
-            </a>
-          </div>
-          {/* Card 4 */}
-          <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
-            <div className="text-center mb-4">
-              <FaCss3Alt className="text-blue-500 text-4xl mx-auto" />
-            </div>
-            <h3 className="text-xl font-medium text-center mb-2">Tailwind CSS</h3>
-            <p className="text-gray-400 mb-4 text-center ">
-              Tailwind CSS নিয়ে বাংলাদেশের প্রখ্যাত টিউটোরিয়াল
-            </p>
-            <a
-              href="#"
-              className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
-            >
-              ভিডিও দেখুন
-            </a>
-          </div>
-        </div>
+  {/* Card 4 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaCuttlefish className="text-green-500 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">C</h3>
+    <p className="text-gray-400 text-center mb-4">
+      C প্রোগ্রামিং শেখার সহজ উপায়।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
+
+  {/* Card 5 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaCuttlefish className="text-purple-500 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">C++</h3>
+    <p className="text-gray-400 text-center mb-4">
+      C++ এর মাধ্যমে অ্যাডভান্সড প্রোগ্রামিং টেকনিক।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
+
+  {/* Card 6 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaReact className="text-cyan-400 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">React.js</h3>
+    <p className="text-gray-400 text-center mb-4">
+      React.js ফ্রেমওয়ার্কের বেসিক থেকে অ্যাডভান্সড টিউটোরিয়াল।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
+
+  {/* Card 7 */}
+  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+    <div className="text-center mb-4">
+      <FaNodeJs className="text-green-600 text-4xl mx-auto" />
+    </div>
+    <h3 className="text-xl font-medium text-center mb-2">Node.js</h3>
+    <p className="text-gray-400 text-center mb-4">
+      Express Node & MongoDB চিটোটোরিয়াল।
+    </p>
+    <a
+      href="#"
+      className="text-blue-400 flex justify-center hover:text-blue-600 border-2 p-1 rounded-2xl border-transparent hover:border-blue-600"
+    >
+      ভিডিও দেখুন
+    </a>
+  </div>
+</div>
+
       </div>
     </section>
   );

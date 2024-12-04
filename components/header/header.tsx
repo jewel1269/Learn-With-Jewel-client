@@ -62,20 +62,40 @@ const Navbar: React.FC = () => {
               <FaCaretDown />
             </button>
             {activeDropdown === "courses" && (
-              <div className="absolute left-0 mt-2 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
+              <div className="absolute left-0 mt-2 w-44 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
                 <Link href="/course-details">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    কোর্সের বিস্তারিত
+                    এইচটিএমএল (HTML)
                   </p>
                 </Link>
                 <Link href="/course-flow">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    কোর্স ফ্লো দেখুন
+                    সিএসএস (CSS)
                   </p>
                 </Link>
                 <Link href="/projects">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    প্রজেক্টস
+                    জাভাস্ক্রিপ্ট (Javascript)
+                  </p>
+                </Link>
+                <Link href="/projects">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    সি (C)
+                  </p>
+                </Link>
+                <Link href="/projects">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    সি++ (C++)
+                  </p>
+                </Link>
+                <Link href="/projects">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    রিয়্যেক্ট (React.js)
+                  </p>
+                </Link>
+                <Link href="/projects">
+                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
+                    নোড জেএস (Node.js)
                   </p>
                 </Link>
               </div>
