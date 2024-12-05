@@ -54,7 +54,7 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                   placeholder="boss@gmail.com"
                 />
               </div>
@@ -74,7 +74,7 @@ const Login = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    className="w-full px-4 py-3 pr-10 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                    className="w-full px-4 py-1 pr-10 bg-gray-600 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                     placeholder="Password"
                   />
                   <div className="relative ml-96">
@@ -92,13 +92,13 @@ const Login = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className=" py-3  mt-4 border w-40 px-3 bg-green-500  border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
+                  className=" py-1  mt-4 border w-40 px-3   border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
                 >
                   লগইন করুন
                 </button>
               </div>
             </form>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <p className="mt-6 text-center text-sm text-gray-400">
                 <Link
                   href="/passForget"
@@ -108,7 +108,7 @@ const Login = () => {
                 </Link>
               </p>
               <Link href={"/registration"}>
-                <p className="underline text-gray-300 text-sm">নিবন্ধন করুন</p>
+                <p className="underline mt-6 text-gray-300 text-sm">নিবন্ধন করুন</p>
               </Link>
             </div>
           </div>

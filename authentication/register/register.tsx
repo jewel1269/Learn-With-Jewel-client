@@ -56,7 +56,7 @@ const Register = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                   placeholder="আপনার নাম"
                 />
               </div>
@@ -73,7 +73,7 @@ const Register = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                   placeholder="আপনার ইমেইল"
                 />
               </div>
@@ -93,7 +93,7 @@ const Register = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    className="w-full px-4 py-3 pr-10 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                    className="w-full px-4 py-1 pr-10 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                     placeholder="Password"
                   />
                   <div className="relative ml-96">
@@ -111,7 +111,7 @@ const Register = () => {
               <div className="">
                 <button
                   type="submit"
-                  className=" py-3  mt-4 border w-40 px-3 bg-green-500  border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
+                  className=" py-1  mt-4 border w-40 px-3   border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
                 >
                   নিবন্ধন করুন
                 </button>

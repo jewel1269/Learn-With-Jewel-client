@@ -53,43 +53,42 @@ const MyCart = () => {
   };
 
   return (
-    <div className="p-4 lg:p-10 max-w-7xl text-white mx-auto">
+    <div className="p-4 lg:p-10 w-full text-white mx-auto">
       <h1 className="text-2xl lg:text-4xl font-bold mb-6">My <span className="text-green-500">Cart</span></h1>
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Cart Items */}
         <div className="lg:col-span-2">
           <div className="flex flex-col gap-4">
             {cartItems.map((item) => (
-              <div key={item.id} className="flex items-center justify-between p-4 border rounded-lg shadow-md">
+              <div key={item.id} className="flex items-center justify-between p-2 border rounded-lg shadow-md">
                 {/* Product Image */}
-                <div className="relative w-24 h-24">
+                <div className="relative w-24 h-16">
                   <Image
                     fill
                     src={item.image}
                     alt={item.name}
-                    className="rounded-md object-cover"
+                    className="rounded-md "
                   />
                 </div>
                 {/* Product Details */}
                 <div className="flex-1 px-4">
                   <h2 className="text-lg font-semibold">{item.name}</h2>
-                  <p className="text-sm text-gray-500">{item.category}</p>
                   <p className="text-lg font-bold">৳{item.price.toLocaleString("en-BD")}</p>
                 </div>
                 {/* Quantity Controls */}
                 <div className="flex items-center">
                   <button
                     onClick={() => updateQuantity(item.id, "decrement")}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded-md"
+                    className="px-2 py-1 font-bold  text-red-500 rounded-md"
                   >
-                    -
+                    ➖
                   </button>
                   <span className="px-4">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, "increment")}
-                    className="px-3 py-1 bg-gray-200 text-gray-700 rounded-md"
+                    className="px-2 py-1 font-bold  text-gray-700 rounded-md"
                   >
-                    +
+                    ➕
                   </button>
                 </div>
               </div>

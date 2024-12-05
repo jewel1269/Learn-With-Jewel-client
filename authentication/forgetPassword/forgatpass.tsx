@@ -34,7 +34,7 @@ const ForgatPass = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                   placeholder="আপনার ইমেইল"
                 />
               </div>
@@ -42,7 +42,7 @@ const ForgatPass = () => {
               <div className="">
                 <button
                   type="submit"
-                  className=" py-3 mt-4 border w-44 px-5 bg-green-500  border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
+                  className=" py-3 mt-4 border w-44 px-5   border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
                 >
                   ভেরিফিকেশন করুন
                 </button>

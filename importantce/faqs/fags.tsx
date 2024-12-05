@@ -56,12 +56,12 @@ const FAQPage: React.FC = () => {
           {faqItems.map((faq, index) => (
             <div
               key={index}
-              className="p-6 bg-white leading-relaxed shadow rounded-lg text-start "
+              className="p-6 leading-relaxed shadow rounded-lg text-start "
             >
               <h2 className="text-xl font-semibold text-green-500">
                 {faq.question}
               </h2>
-              <p className="mt-2 text-gray-700">{faq.answer}</p>
+              <p className="mt-2 text-gray-300">{faq.answer}</p>
             </div>
           ))}
         </div>

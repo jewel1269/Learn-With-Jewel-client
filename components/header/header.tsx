@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             </button>
             {activeDropdown === "courses" && (
               <div className="absolute left-0 mt-2 w-44 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
-                <Link href="/course-details">
+                <Link href="/course">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
                     এইচটিএমএল (HTML)
                   </p>
