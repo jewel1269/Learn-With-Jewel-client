@@ -77,50 +77,51 @@ const courses = [
 ];
 
 const statusColors: Record<string, string> = {
-  Ongoing: "bg-blue-100 text-blue-700",
-  Done: "bg-green-100 text-green-700",
-  Paused: "bg-red-100 text-red-700",
+  Ongoing: "bg-blue-100 text-blue-800",
+  Done: "bg-green-100 text-green-800",
+  Paused: "bg-red-100 text-red-800",
 };
 
 const CoursesGrid = () => {
   return (
-    <main className=" text-white min-h-screen p-6">
-      <h1 className="text-2xl font-bold text-center mb-6">
-        Our <span className="text-green-500">Courses</span>
+    <main className="text-white min-h-screen p-6 bg-gray-900">
+      <h1 className="text-3xl font-bold text-center mb-6">
+        প্রিমিয়াম <span className="text-green-500">কোর্স</span>
       </h1>
-      <div className="grid text-white grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className=" shadow-md shadow-red-300  text-white rounded-xl p-5 border"
-            role="article"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {courses.map((course) => (
+          <article
+            key={course.id}
+            className="shadow-xl shadow-zinc-500 h-96 border border-black bg-lime-800 rounded-xl p-6 flex flex-col justify-between transform transition duration-500 ease-in-out opacity-0 animate-fade-in hover:scale-105 hover:shadow-2xl"
           >
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold">{course.title}</h2>
-              <span
-                className={`text-sm px-2 text-red-500 py-1 rounded ${
-                  statusColors[course.status]
-                }`}
-              >
-                {course.status}
-              </span>
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">{course.title}</h2>
+                <span
+                  className={`text-sm px-3 py-1 rounded-full font-medium ${
+                    statusColors[course.status]
+                  }`}
+                >
+                  {course.status}
+                </span>
+              </div>
+              <p className="text-sm mb-2 font-semibold">{course.category}</p>
+              <p className="text-sm mb-4">{course.description}</p>
+              <p className="text-xs text-gray-300">
+                Instructor: {course.teacher}
+              </p>
             </div>
-            <p className="text-white text-sm mb-2">{course.category}</p>
-            <p className="text-white text-sm">{course.description}</p>
-            <p className="mt-4 text-white text-xs">
-              Instructor: {course.teacher}
-            </p>
-           <Link href={`/courseDetails/${course.id}`}>
-           <button
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-              aria-label={`${
-                course.status === "Done" ? "Claim reward" : "Continue course"
-              } for ${course.title}`}
-            >
-              {course.status === "Done" ? "Claim Reward" : "Continue"}
-            </button>
-           </Link>
-          </div>
+            <Link href={`/courseDetails/${course.id}`}>
+              <button
+                className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:scale-105 hover:shadow-lg transition transform duration-300"
+                aria-label={`${
+                  course.status === "Done" ? "Claim reward" : "Continue course"
+                } for ${course.title}`}
+              >
+                {course.status === "Done" ? "Claim Reward" : "Continue"}
+              </button>
+            </Link>
+          </article>
         ))}
       </div>
     </main>

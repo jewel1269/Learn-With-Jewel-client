@@ -65,37 +65,7 @@ const Navbar: React.FC = () => {
               <div className="absolute left-0 mt-2 w-44 flex flex-col  dark:bg-gray-100 dark:text-black text-sm rounded shadow-lg z-10">
                 <Link href="/course">
                   <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    এইচটিএমএল (HTML)
-                  </p>
-                </Link>
-                <Link href="/course-flow">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    সিএসএস (CSS)
-                  </p>
-                </Link>
-                <Link href="/projects">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    জাভাস্ক্রিপ্ট (Javascript)
-                  </p>
-                </Link>
-                <Link href="/projects">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    সি (C)
-                  </p>
-                </Link>
-                <Link href="/projects">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    সি++ (C++)
-                  </p>
-                </Link>
-                <Link href="/projects">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    রিয়্যেক্ট (React.js)
-                  </p>
-                </Link>
-                <Link href="/projects">
-                  <p className="px-4 py-2 hover:bg-[#1f2937] dark:hover:bg-gray-200">
-                    নোড জেএস (Node.js)
+                    কোর্সের বিস্তারিত
                   </p>
                 </Link>
               </div>
@@ -168,7 +138,7 @@ const Navbar: React.FC = () => {
           </button>
           <Link href="/login">
             <p
-              className={`px-3 py-1 rounded-full hover:bg-[#2ea043] dark:hover:bg-blue-700 transition`}
+              className={`px-3  border  rounded-full  hover:text-red-500 dark:hover:bg-blue-700 transition`}
             >
               লগইন
             </p>

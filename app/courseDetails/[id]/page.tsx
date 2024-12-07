@@ -1,10 +1,8 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import React from "react";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 
-// Mock data for demonstration. Replace with dynamic fetching if necessary.
 const courses = [
   {
     id: 1,
@@ -14,6 +12,15 @@ const courses = [
       "Master AngularJS from the basics to building an advanced application with Firebase’s Firestore as well.",
     status: "Ongoing",
     teacher: "Brad Traversy",
+    price: "$120",
+    rating: 4.5,
+    duration: "3 weeks",
+    hoursPerWeek: "3-4 hours per week",
+    level: "Intermediate",
+    location: "Indonesia",
+    learners: 146,
+    date: "March 21, 2017",
+    image: "/images/angular-course.jpg", // Add the image path
   },
   {
     id: 2,
@@ -23,52 +30,126 @@ const courses = [
       "Learn PHP CodeIgniter and understand working with MVC and HMVC from zero-to-hero.",
     status: "Done",
     teacher: "InsideCode ML",
+    price: "$99",
+    rating: 4.2,
+    duration: "2 weeks",
+    hoursPerWeek: "2-3 hours per week",
+    level: "Beginner",
+    location: "USA",
+    learners: 95,
+    date: "April 10, 2018",
+    image: "/images/codeigniter-course.jpg", // Add the image path
   },
 ];
 
 const CourseDetails = () => {
-  const searchParams = useSearchParams(); 
-  const id = searchParams.get("id"); 
-  const router = useRouter();
-
-  console.log(id);
+  const params = useParams();
+  const id = params?.id;
 
   const course = courses.find((course) => course.id === parseInt(id || "", 10));
 
   if (!course) {
-    return <p className="text-center text-red-500">Course not found.</p>;
+    return <p className="text-center text-red-500 mt-6">Course not found.</p>;
   }
 
   return (
-    <main className="min-h-screen p-6 bg-gray-100 text-gray-800">
-      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-3xl font-bold mb-4">{course.title}</h1>
-        <p className="text-sm text-gray-600 mb-2">
-          Category: {course.category}
-        </p>
-        <p className="text-lg text-gray-700 mb-4">{course.description}</p>
-        <p className="text-sm text-gray-500 mb-4">
-          Instructor: {course.teacher}
-        </p>
-        <span
-          className={`inline-block px-3 py-1 text-sm rounded ${
-            course.status === "Ongoing"
-              ? "bg-blue-100 text-blue-700"
-              : course.status === "Done"
-              ? "bg-green-100 text-green-700"
-              : "bg-red-100 text-red-700"
-          }`}
-        >
-          {course.status}
-        </span>
-        <button
-          className="block mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          onClick={() => router.push("/")} // Using Next.js navigation for route switching
-        >
-          Back to Courses
-        </button>
+    <div className="min-h-screen text-white py-10">
+      <div className="max-w-7xl mx-auto text-white border border-black shadow-lg rounded-lg overflow-hidden">
+        {/* Header */}
+        <div className="relative">
+          <img
+            src={course.image}
+            alt={course.title}
+            className="w-full h-64 object-cover"
+          />
+          <div className="absolute top-4 left-4  p-2 rounded-lg shadow text-gray-800">
+            <p className="text-sm font-medium">Rating: ⭐ {course.rating}</p>
+          </div>
+        </div>
+
+        {/* Course Title and Enroll Button */}
+        <div className="p-6 text-white">
+          <div className="flex justify-between text-white items-center">
+            <div>
+              <h1 className="text-2xl font-bold">{course.title}</h1>
+              <p className="text-white text-sm">by {course.teacher}</p>
+            </div>
+            <div className="text-right">
+              <p className="text-red-500">{course.date}</p>
+              <button className="mt-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+                ENROLL NOW
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className="p-6 flex flex-col lg:flex-row gap-8">
+          {/* Left Column */}
+          <div className="flex-1">
+            <h2 className="text-xl font-semibold mb-4">About this course</h2>
+            <p className="text-white mb-6">{course.description}</p>
+            <h3 className="text-lg font-semibold mb-2">What you will learn</h3>
+            <ul className="list-disc list-inside text-white space-y-2">
+              <li>
+                Learn to produce initial sketches that capture the process of
+                ideation
+              </li>
+              <li>
+                Create user stories and storyboards to support the concept
+              </li>
+              <li>
+                Develop interface wireframes to provide an engaging test example
+              </li>
+              <li>Use comparative analysis techniques</li>
+              <li>Run a design walkthrough to test the concept</li>
+            </ul>
+          </div>
+
+          {/* Right Column */}
+          <div className="lg:w-1/3">
+            <div className=" p-4 rounded-lg shadow-sm">
+              <ul className="space-y-4">
+                <li className="flex justify-between">
+                  <span className="font-medium">Price:</span>
+                  <span className="text-lg font-bold text-green-500">
+                    {course.price}
+                  </span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Category:</span>
+                  <span>{course.category}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Status:</span>
+                  <span>{course.status}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Duration:</span>
+                  <span>{course.duration}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Hours/Week:</span>
+                  <span>{course.hoursPerWeek}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Level:</span>
+                  <span>{course.level}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Location:</span>
+                  <span>{course.location}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Learners:</span>
+                  <span>{course.learners}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 
