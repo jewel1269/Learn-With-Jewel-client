@@ -84,7 +84,7 @@ const statusColors: Record<string, string> = {
 
 const CoursesGrid = () => {
   return (
-    <main className="text-white min-h-screen p-6 bg-gray-900">
+    <main className="text-black min-h-screen p-6 bg-white">
       <h1 className="text-3xl font-bold text-center mb-6">
         প্রিমিয়াম <span className="text-green-500">কোর্স</span>
       </h1>

@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={
-        "bg-[#070d17] text-white px-4 md:px-8 py-4 flex flex-wrap justify-around items-center"
+        "bg-white text-black px-4 md:px-8 py-4 flex flex-wrap justify-around items-center"
       }
     >
       {/* Left Section: Logo */}

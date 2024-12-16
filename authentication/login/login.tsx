@@ -24,13 +24,13 @@ const Login = () => {
   };
 
   return (
-    <div className="flex bg-[#070d17] flex-col  items-center">
+    <div className="flex bg-white flex-col   items-center">
       {/* Header */}
       <div className="text-center mt-10 lg:mt-20">
-        <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 tracking-wide">
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-black mb-4 tracking-wide">
           <span className="text-green-500">লগইন</span> করুন
         </h2>
-        <p className="text-md text-gray-400">
+        <p className="text-md text-gray-800">
           আপনার লগইন তথ্য কারো সাথে শেয়ার করবেন না
         </p>
       </div>
@@ -44,9 +44,9 @@ const Login = () => {
               <div className="mb-6 ">
                 <label
                   htmlFor="email"
-                  className="block text-md  font-medium text-gray-300 mb-2"
+                  className="block font-bold text-md   text-gray-800 mb-2"
                 >
-                  আপনার ইমেইল এড্রেস *
+                  আপনার ইমেইল এড্রেস*
                 </label>
                 <p className="text-xs text-gray-400 mb-2">
                   যে ইমেইল এড্রেস দিয়ে আপনি নিবন্ধন করেছিলেন।
@@ -54,7 +54,7 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-1 bg-[#0e1a2b] text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 border border-gray-600 text-black rounded-lg  placeholder-gray-500"
                   placeholder="boss@gmail.com"
                 />
               </div>
@@ -62,9 +62,9 @@ const Login = () => {
               <div className="mb-6">
                 <label
                   htmlFor="password"
-                  className="block text-md font-medium text-gray-300 mb-2"
+                  className="block font-bold text-md  text-gray-800 mb-2"
                 >
-                  পাসওয়ার্ড দিন *
+                  পাসওয়ার্ড দিন*
                 </label>
                 <p className="text-xs text-gray-400 mb-2">
                   পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে এবং সেখানে কমপক্ষে 1 টি
@@ -74,7 +74,7 @@ const Login = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    className="w-full px-4 py-1 pr-10 bg-gray-600 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                    className="w-full px-4 py-1 pr-10 border border-gray-600  text-black rounded-lg  placeholder-gray-500"
                     placeholder="Password"
                   />
                   <div className="relative ml-96">
@@ -102,21 +102,21 @@ const Login = () => {
               <p className="mt-6 text-center text-sm text-gray-400">
                 <Link
                   href="/passForget"
-                  className="text-[#4fa0ec] hover:underline"
+                  className="text-red-500 hover:underline"
                 >
                   পাসওয়ার্ড ভুল গেছেন?
                 </Link>
               </p>
               <Link href={"/registration"}>
-                <p className="underline mt-6 text-gray-300 text-sm">নিবন্ধন করুন</p>
+                <p className="underline mt-6 text-green-300 text-sm">নিবন্ধন করুন</p>
               </Link>
             </div>
           </div>
 
           {/* Right Side: Illustration */}
-          <div className="w-full lg:w-1/2 bg-[#102234] flex flex-col justify-center items-center p-10">
+          <div className="w-full lg:w-1/2 lg:-mt-16 flex flex-col justify-center items-center p-10">
             <Image
-              width={400}
+              width={500}
               height={400}
               src={loginLogo}
               alt="Login Illustration"

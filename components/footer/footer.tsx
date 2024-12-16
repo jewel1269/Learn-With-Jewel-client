@@ -7,7 +7,7 @@ import payment from "@/images/payment.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#070815] border border-black rounded-3xl text-white py-8">
+    <footer className="bg-gray-100 border border-gray-200 rounded-3xl text-black py-8">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -18,8 +18,8 @@ const Footer = () => {
                   src={logo}
                   alt="Learn with Jewel Logo"
                   className="h-12 w-20"
-                  width={350}
-                  height={350}
+                  width={400}
+                  height={400}
                 />
                 <span className="font-semibold text-sm md:text-base">
                   Learn <br />
@@ -42,36 +42,37 @@ const Footer = () => {
         </div>
 
         {/* Payment Methods */}
-        <div className="w-full  mx-auto mt-4">
+        <div className="w-full flex justify-center  mx-auto mt-4">
           <Image
             src={payment}
             alt="payment"
             width={1000}
             height={1000}
-            className=" object-cover w-full"
+            className=" object-cover lg:h-[140px] lg:w-[1200px] w-full"
           />
         </div>
 
         {/* Social Icons */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-gray-400 hover:text-blue-500">
+            <a href="#" className="text-gray-800 hover:text-blue-500">
               <FaFacebookF size={24} className="transition-all" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-red-500">
+            <a href="#" className="text-gray-800 hover:text-red-500">
               <FaYoutube size={24} className="transition-all" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-blue-500">
+            <a href="#" className="text-gray-800 hover:text-blue-500">
               <FaLinkedinIn size={24} className="transition-all" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-green-500">
+            <a href="#" className="text-gray-800 hover:text-green-500">
               <FaGithub size={24} className="transition-all" />
             </a>
           </div>
         </div>
+        <hr className="mt-5"/>
 
         {/* Footer Bottom */}
-        <div className="mt-8 text-center text-sm text-gray-500">
+        <div className="mt-3 text-center text-sm text-red-500">
           <p>কপিরাইট © 2024 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
       </div>

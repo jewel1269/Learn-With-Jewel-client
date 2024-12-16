@@ -19,7 +19,7 @@ const CardTwo: React.FC<CardProps> = ({
   children,
 }) => {
   return (
-    <div className="bg-[#070d17] border border-gray-700  rounded-lg shadow-lg p-6 text-custom-text">
+    <div className="bg-white border border-gray-700  rounded-lg shadow-lg p-6 text-custom-text">
       {children}
       <div className="flex justify-center">
       <Image src={photo} width={200} className="rounded-xl" height={200} alt="Logo"/>

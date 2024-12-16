@@ -5,7 +5,7 @@ import tutorial from "/images/j-removebg-preview.png"; // Path adjusted if the i
 
 const TutorialsSection: React.FC = () => {
   return (
-    <section className="bg-[#070d17] shadow-transparent shadow-lg text-white  py-16">
+    <section className="bg-white shadow-transparent shadow-lg text-black  py-16">
       <div className="container lg:flex justify-between mx-auto px-6">
         <div className="w-3/4">
           <Image
@@ -29,12 +29,12 @@ const TutorialsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
   {/* Card 1 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white hover:-translate-x-3 border border-black rounded-lg p-6">
     <div className="text-center mb-4">
       <FaHtml5 className="text-orange-500 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">HTML</h3>
-    <p className="text-gray-400 text-center mb-4">
+    <p className="text-black text-center mb-4">
       HTML শেখার জন্য সহজ ও কার্যকরী টিউটোরিয়াল।
     </p>
     <a
@@ -46,12 +46,12 @@ const TutorialsSection: React.FC = () => {
   </div>
 
   {/* Card 2 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white hover:-translate-x-3 border border-black  rounded-lg p-6">
     <div className="text-center mb-4">
       <FaCss3Alt className="text-blue-500 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">CSS</h3>
-    <p className="text-gray-400 mb-4 text-center">
+    <p className="text-black mb-4 text-center">
       CSS স্টাইলিংয়ের জন্য বেসিক থেকে অ্যাডভান্সড টিউটোরিয়াল।
     </p>
     <a
@@ -63,12 +63,12 @@ const TutorialsSection: React.FC = () => {
   </div>
 
   {/* Card 3 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white hover:-translate-x-3 border border-black  rounded-lg p-6">
     <div className="text-center mb-4">
       <FaJs className="text-yellow-500 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">JavaScript</h3>
-    <p className="text-gray-400 text-center mb-4">
+    <p className="text-black text-center mb-4">
       বিভিন্ন দিক থেকে সম্পূর্ণ ফ্রি মডার্ন জাভাস্ক্রিপ্ট কোর্স।
     </p>
     <a
@@ -80,12 +80,12 @@ const TutorialsSection: React.FC = () => {
   </div>
 
   {/* Card 4 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white border border-black  hover:-translate-x-3 rounded-lg p-6">
     <div className="text-center mb-4">
       <FaCuttlefish className="text-green-500 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">C</h3>
-    <p className="text-gray-400 text-center mb-4">
+    <p className="text-black text-center mb-4">
       C প্রোগ্রামিং শেখার সহজ উপায়।
     </p>
     <a
@@ -97,12 +97,12 @@ const TutorialsSection: React.FC = () => {
   </div>
 
   {/* Card 5 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white border border-black  hover:-translate-x-3 rounded-lg p-6">
     <div className="text-center mb-4">
       <FaCuttlefish className="text-purple-500 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">C++</h3>
-    <p className="text-gray-400 text-center mb-4">
+    <p className="text-black text-center mb-4">
       C++ এর মাধ্যমে অ্যাডভান্সড প্রোগ্রামিং টেকনিক।
     </p>
     <a
@@ -114,12 +114,12 @@ const TutorialsSection: React.FC = () => {
   </div>
 
   {/* Card 6 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white border border-black  hover:-translate-x-3 rounded-lg p-6">
     <div className="text-center mb-4">
       <FaReact className="text-cyan-400 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">React.js</h3>
-    <p className="text-gray-400 text-center mb-4">
+    <p className="text-black text-center mb-4">
       React.js ফ্রেমওয়ার্কের বেসিক থেকে অ্যাডভান্সড টিউটোরিয়াল।
     </p>
     <a
@@ -131,12 +131,12 @@ const TutorialsSection: React.FC = () => {
   </div>
 
   {/* Card 7 */}
-  <div className="bg-[#1c1e27] hover:-translate-x-3 rounded-lg p-6">
+  <div className="bg-white border border-black  hover:-translate-x-3 rounded-lg p-6">
     <div className="text-center mb-4">
       <FaNodeJs className="text-green-600 text-4xl mx-auto" />
     </div>
     <h3 className="text-xl font-medium text-center mb-2">Node.js</h3>
-    <p className="text-gray-400 text-center mb-4">
+    <p className="text-black text-center mb-4">
       Express Node & MongoDB চিটোটোরিয়াল।
     </p>
     <a

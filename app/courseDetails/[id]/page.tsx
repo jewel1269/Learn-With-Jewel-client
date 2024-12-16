@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import React from "react";
 
@@ -46,18 +47,19 @@ const CourseDetails = () => {
   const params = useParams();
   const id = params?.id;
 
-  const course = courses.find((course) => course.id === parseInt(id || "", 10));
+  const course = courses.find((course) => course.id === parseInt(id || " ", 10));
 
   if (!course) {
     return <p className="text-center text-red-500 mt-6">Course not found.</p>;
   }
 
   return (
-    <div className="min-h-screen text-white py-10">
-      <div className="max-w-7xl mx-auto text-white border border-black shadow-lg rounded-lg overflow-hidden">
+    <div className="min-h-screen text-black  py-10">
+      <div className="max-w-7xl mx-auto text-black border border-black shadow-lg rounded-lg overflow-hidden">
         {/* Header */}
         <div className="relative">
-          <img
+          <Image
+            fill
             src={course.image}
             alt={course.title}
             className="w-full h-64 object-cover"
@@ -68,11 +70,11 @@ const CourseDetails = () => {
         </div>
 
         {/* Course Title and Enroll Button */}
-        <div className="p-6 text-white">
+        <div className="p-6 text-blavk">
           <div className="flex justify-between text-white items-center">
             <div>
               <h1 className="text-2xl font-bold">{course.title}</h1>
-              <p className="text-white text-sm">by {course.teacher}</p>
+              <p className="text-black text-sm">by {course.teacher}</p>
             </div>
             <div className="text-right">
               <p className="text-red-500">{course.date}</p>
@@ -88,9 +90,9 @@ const CourseDetails = () => {
           {/* Left Column */}
           <div className="flex-1">
             <h2 className="text-xl font-semibold mb-4">About this course</h2>
-            <p className="text-white mb-6">{course.description}</p>
+            <p className="text-black mb-6">{course.description}</p>
             <h3 className="text-lg font-semibold mb-2">What you will learn</h3>
-            <ul className="list-disc list-inside text-white space-y-2">
+            <ul className="list-disc list-inside text-black space-y-2">
               <li>
                 Learn to produce initial sketches that capture the process of
                 ideation

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Community: React.FC = () => {
   return (
-    <header className="bg-[#070d17] text-white text-center py-5">
+    <header className="bg-white text-black text-center py-5">
       <div className="flex justify-center">
         <Image
           src={community}

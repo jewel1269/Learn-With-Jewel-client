@@ -6,16 +6,16 @@ import logo from "@/images/logo-removebg-preview.png";
 const AboutJewel = () => {
   return (
     <div>
-      <h2 className="text-3xl text-center font-bold text-white mb-4">
+      <h2 className="text-3xl text-center font-bold text-black mb-4">
         প্রতিষ্ঠাতা সম্পর্কে কিছু কথা
       </h2>
 
       <div>
-        <main className="bg-[#080d19] min-h-screen text-custom-text py-8">
+        <main className="bg-white min-h-screen text-custom-text py-8">
           <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
             {/* Left Text Section */}
             <div className="lg:w-1/2">
-              <p className="text-lg leading-relaxed text-gray-300">
+              <p className="text-lg leading-relaxed text-black">
                 জুয়েল মিয়া একজন প্রযুক্তি উদ্যোক্তা। ব্লকচেইন প্রযুক্তির সঙ্গে
                 গড়ে তোলা ভবিষ্যৎ ২০০৮ সালে তিনি প্রতিষ্ঠা করেন বাংলাদেশের প্রথম
                 ডিজিটাল এজেন্সি - এনালাইজেনা। প্রোগ্রামিং এর প্রতি ভালোবাসা এবং
@@ -24,7 +24,7 @@ const AboutJewel = () => {
                 প্রফেশনাল রিমোট প্রজেক্ট চালানো হয়েছে। লার্ন উইথ সুমিত কমিউনিটি
                 চালানো একটি জনপ্রিয় প্ল্যাটফর্ম।
               </p>
-              <p className="mt-4 font-medium text-white">
+              <p className="mt-4 font-medium text-black">
                 <span className="text-green-500 font-bold">জুয়েল মিয়া</span>
                 <br />
                 প্রতিষ্ঠাতা - লার্ন উইথ জুয়েল

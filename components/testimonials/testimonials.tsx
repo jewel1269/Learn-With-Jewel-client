@@ -49,8 +49,8 @@ const testimonials = [
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="bg-[#070d17]">
-        <div className=" lg:-mt-56 lg:mb-8">
+    <div className="bg-white">
+        <div className=" lg:-mt-72 lg:mb-8">
       <div className="flex justify-center">
         <Image
           src={wow}
@@ -60,7 +60,7 @@ const Testimonials: React.FC = () => {
           className="rounded-lg mb-6"
         />
       </div>
-      <div className="text-white px-8 max-w-[1450px] mx-auto flex flex-col justify-center md:px-16 bg-[#070d17]">
+      <div className="text-black px-8 max-w-[1450px] mx-auto flex flex-col justify-center md:px-16 ">
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-4">
           <span className="text-green-500">লার্নাররা</span> আমাদের সম্পর্কে যা
           ভাবেন
@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-800 rounded-lg shadow-md border border-gray-700 flex flex-col items-center"
+              className="p-6 bg-white- rounded-lg shadow-md border border-gray-700 flex flex-col items-center"
             >
               <Image
                 src={testimonial.profileImage}
@@ -84,10 +84,10 @@ const Testimonials: React.FC = () => {
                 className="rounded-full mb-4 border-2 border-gray-600"
               />
               <h3 className="text-lg font-semibold mb-2">{testimonial.name}</h3>
-              <p className="text-sm text-gray-400 mb-2">
+              <p className="text-sm text-black mb-2">
                 commented on {testimonial.platform}
               </p>
-              <p className="text-gray-300 text-center">{testimonial.comment}</p>
+              <p className="text-gray-800 text-center">{testimonial.comment}</p>
             </div>
           ))}
         </div>
