@@ -14,13 +14,13 @@ export default function Home() {
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row border border-gray-700 rounded-lg justify-between items-center p-5 gap-8 lg:gap-4 max-w-7xl mx-auto">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <p className="text-lg leading-relaxed">
+            <h1 className="text-lg leading-relaxed">
               লার্ন উইথ জুয়েল ২০২৩ সালের 21মে - 27মে আয়োজন করেছিলো সর্বজনস্বীকৃত
               এবং প্রশংসিত ডেভেলোপার কনফারেন্স devConf 1.0. সেখানে চারশ জন
               শিক্ষার্থী সহ উপস্থিত ছিলেন কমিউনিটির প্রায় দেড়শ জনপ্রিয় এবং
               শ্রদ্ধেয় অতিথিবৃন্দ। সেই সাথে পুরো ইভেন্ট জুড়ে বাংলাদেশের প্রায় ৭০
               হাজারেরও বেশি ডেভেলপার ভাইরা অনলাইনে কানেক্টেড হয়েছিলেন।
-            </p>
+            </h1>
             <button className="bg-blue-600 text-white mt-4 px-4 py-2 rounded-full hover:bg-blue-700">
               ওয়েবসাইট ভিজিট করুন
             </button>

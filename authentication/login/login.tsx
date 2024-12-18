@@ -30,9 +30,9 @@ const Login = () => {
         <h2 className="text-3xl lg:text-4xl font-extrabold text-black mb-4 tracking-wide">
           <span className="text-green-500">লগইন</span> করুন
         </h2>
-        <p className="text-md text-gray-800">
+        <h1 className="text-md text-gray-800">
           আপনার লগইন তথ্য কারো সাথে শেয়ার করবেন না
-        </p>
+        </h1>
       </div>
       <Toaster />
       {/* Main Content */}
@@ -48,9 +48,9 @@ const Login = () => {
                 >
                   আপনার ইমেইল এড্রেস*
                 </label>
-                <p className="text-xs text-gray-400 mb-2">
+                <h1 className="text-xs text-gray-400 mb-2">
                   যে ইমেইল এড্রেস দিয়ে আপনি নিবন্ধন করেছিলেন।
-                </p>
+                </h1>
                 <input
                   type="email"
                   id="email"
@@ -66,10 +66,10 @@ const Login = () => {
                 >
                   পাসওয়ার্ড দিন*
                 </label>
-                <p className="text-xs text-gray-400 mb-2">
+                <h1 className="text-xs text-gray-400 mb-2">
                   পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে এবং সেখানে কমপক্ষে 1 টি
                   লেটার এবং 1 টি নাম্বার থাকতেই হবে।
-                </p>
+                </h1>
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
@@ -99,16 +99,16 @@ const Login = () => {
               </div>
             </form>
             <div className="flex justify-between items-center">
-              <p className="mt-6 text-center text-sm text-gray-400">
+              <div className="mt-6 text-center text-sm text-gray-400">
                 <Link
                   href="/passForget"
                   className="text-red-500 hover:underline"
                 >
                   পাসওয়ার্ড ভুল গেছেন?
                 </Link>
-              </p>
+              </div>
               <Link href={"/registration"}>
-                <p className="underline mt-6 text-green-300 text-sm">নিবন্ধন করুন</p>
+                <h1 className="underline mt-6 text-green-300 text-sm">নিবন্ধন করুন</h1>
               </Link>
             </div>
           </div>

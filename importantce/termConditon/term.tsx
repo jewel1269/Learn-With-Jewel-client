@@ -4,11 +4,11 @@ import React from "react";
 
 const Term = () => {
   return (
-    <div className="bg-[#070d17] min-h-screen py-8 px-4 md:px-16">
+    <div className="text-black bg-white min-h-screen py-8 px-4 md:px-16">
       {/* Breadcrumb */}
-      <nav className="text-sm text-white mb-4">
-        <Link href="/" className="hover:underline">
-          হোম
+      <nav className="text-sm text-black mb-4">
+        <Link href="/" className="text-black hover:underline">
+          হোম 
         </Link>{" "}
         &gt; <span className="text-red-500">টেক্সট</span>
       </nav>
@@ -16,19 +16,19 @@ const Term = () => {
       {/* Title */}
       <header className="text-center mb-8">
         <h1 className="text-3xl font-bold text-red-500">টার্মস এবং কন্ডিশনস</h1>
-        <p className="text-white mt-2">
+        <h1 className="text-white mt-2">
           লার্ন উইথ জুয়েল এবং প্রতিশ্রুত স্বার্থান্বেষণ সম্পর্কে শিক্ষণ
-        </p>
+        </h1>
       </header>
 
       {/* Content */}
-      <article className="text-white   shadow-md rounded-lg p-6 md:p-10  leading-relaxed">
-        <p>
+      <article className="text-black   shadow-md rounded-lg p-6 md:p-10  leading-relaxed">
+        <li>
           🎯 আমার অধিকারগুলো জানুন বিধিমালা এবং লার্ন উইথ জুয়েল অধিকারসম্পর্কিত
           বিধিমালায় আপনার ব্যবসায়িক কৌশল রূপান্তরিত এর গুরুত্বের কথা বলা
           হয়েছে। লার্ন উইথ জুয়েল নিশ্চিত করে যে আপনি সামগ্রিকভাবে একটি
           মানসম্পন্ন ন্যায্যতার পরিবেশে রয়েছেন।
-        </p>
+        </li>
 
         <ul className="list-disc py-2 pl-5 mt-4 space-y-2">
           <li>
@@ -65,10 +65,10 @@ const Term = () => {
           </li>
         </ul>
 
-        <p className="mt-6">
+        <li className="mt-6">
           🎯 আপনার কোনো প্রশ্ন বা পরামর্শ থাকলে আমাদের সাথে যোগাযোগ করতে দ্বিধা
           করবেন না!
-        </p>
+        </li>
       </article>
     </div>
   );

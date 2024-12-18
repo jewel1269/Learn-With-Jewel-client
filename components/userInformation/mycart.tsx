@@ -53,7 +53,7 @@ const MyCart = () => {
   };
 
   return (
-    <div className="p-4 lg:p-10 w-full text-white mx-auto">
+    <div className="p-4 lg:p-10 w-full text-black mx-auto">
       <h1 className="text-2xl lg:text-4xl font-bold mb-6">My <span className="text-green-500">Cart</span></h1>
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Cart Items */}
@@ -73,7 +73,7 @@ const MyCart = () => {
                 {/* Product Details */}
                 <div className="flex-1 px-4">
                   <h2 className="text-lg font-semibold">{item.name}</h2>
-                  <p className="text-lg font-bold">৳{item.price.toLocaleString("en-BD")}</p>
+                  <h1 className="text-lg font-bold">৳{item.price.toLocaleString("en-BD")}</h1>
                 </div>
                 {/* Quantity Controls */}
                 <div className="flex items-center">
@@ -101,25 +101,25 @@ const MyCart = () => {
         <div className=" p-6 border rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-4">Order Summary</h2>
           <div className="flex justify-between mb-2">
-            <p>Items</p>
-            <p>{cartItems.length}</p>
+            <h1>Items</h1>
+            <h1>{cartItems.length}</h1>
           </div>
           <div className="flex justify-between mb-2">
-            <p>Shipping</p>
-            <p>৳50</p>
+            <h1>Shipping</h1>
+            <h1>৳50</h1>
           </div>
           <div className="flex justify-between mb-4">
             <p>Promo Code</p>
             <input
               type="text"
               placeholder="Enter your code"
-              className="border px-2 py-1 bg-gray-700 rounded-md w-2/3"
+              className="border px-2 py-1 bg-gray-200 rounded-md w-2/3"
             />
           </div>
-          <button className="bg-red-500 text-white w-full py-2 mb-4 rounded-md">Apply</button>
+          <button className="bg-red-500 hover:-translate-x-1 hover:bg-green-600  text-white w-full py-2 mb-4 rounded-md">Apply</button>
           <div className="flex justify-between text-lg font-bold">
-            <p>Total Cost</p>
-            <p>৳{(calculateTotal() + 50).toLocaleString("en-BD")}</p>
+            <h1>Total Cost</h1>
+            <h1>৳{(calculateTotal() + 50).toLocaleString("en-BD")}</h1>
           </div>
           <button className="bg-purple-600 text-white w-full py-3 mt-4 rounded-md">Checkout</button>
         </div>

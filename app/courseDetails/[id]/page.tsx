@@ -65,7 +65,7 @@ const CourseDetails = () => {
             className="w-full h-64 object-cover"
           />
           <div className="absolute top-4 left-4  p-2 rounded-lg shadow text-gray-800">
-            <p className="text-sm font-medium">Rating: ⭐ {course.rating}</p>
+            <h1 className="text-sm font-medium">Rating: ⭐ {course.rating}</h1>
           </div>
         </div>
 
@@ -74,10 +74,10 @@ const CourseDetails = () => {
           <div className="flex justify-between text-white items-center">
             <div>
               <h1 className="text-2xl font-bold">{course.title}</h1>
-              <p className="text-black text-sm">by {course.teacher}</p>
+              <h1 className="text-black text-sm">by {course.teacher}</h1>
             </div>
             <div className="text-right">
-              <p className="text-red-500">{course.date}</p>
+              <h1 className="text-red-500">{course.date}</h1>
               <button className="mt-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
                 ENROLL NOW
               </button>
@@ -90,7 +90,7 @@ const CourseDetails = () => {
           {/* Left Column */}
           <div className="flex-1">
             <h2 className="text-xl font-semibold mb-4">About this course</h2>
-            <p className="text-black mb-6">{course.description}</p>
+            <h1 className="text-black mb-6">{course.description}</h1>
             <h3 className="text-lg font-semibold mb-2">What you will learn</h3>
             <ul className="list-disc list-inside text-black space-y-2">
               <li>

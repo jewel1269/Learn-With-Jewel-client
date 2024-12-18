@@ -16,10 +16,10 @@ const ProfileCard = () => {
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg p-6 shadow-md mb-6">
         <h1 className="text-xl font-bold">Welcome Back, Brandon</h1>
-        <p className="text-sm mt-2">
+        <h1 className="text-sm mt-2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
           nonummy nibh euismod tincidunt ut laoreet.
-        </p>
+        </h1>
       </div>
 
       {/* Main Content */}
@@ -58,11 +58,11 @@ const ProfileCard = () => {
             <h3 className="text-sm font-bold text-gray-600">Statistics</h3>
             <div className="mt-4">
               <div className="w-24 h-24 mx-auto rounded-full bg-blue-100 flex items-center justify-center">
-                <p className="text-lg font-bold text-blue-500">50%</p>
+                <h1 className="text-lg font-bold text-blue-500">50%</h1>
               </div>
-              <p className="text-center text-sm text-gray-500 mt-2">
+              <h1 className="text-center text-sm text-gray-500 mt-2">
                 Electricity
-              </p>
+              </h1>
             </div>
           </div>
 
@@ -71,9 +71,9 @@ const ProfileCard = () => {
             <h3 className="text-sm font-bold text-gray-600 mb-4">My Devices</h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white rounded-lg shadow-md p-4 text-center">
-                <p className="text-sm font-bold text-gray-600">
+                <h1 className="text-sm font-bold text-gray-600">
                   Air Conditioning
-                </p>
+                </h1>
                 <button className="w-full mt-4 py-2 bg-green-500 text-white rounded-lg">
                   On
                 </button>
@@ -107,7 +107,7 @@ const ProfileCard = () => {
           <div className="bg-white rounded-lg shadow-md p-6 mt-6">
             <h3 className="text-sm font-bold text-gray-600">Light Intensity</h3>
             <div className="mt-4 text-center">
-              <p className="text-lg font-bold text-blue-500">76%</p>
+              <h1 className="text-lg font-bold text-blue-500">76%</h1>
               <div className="flex items-center justify-center mt-4">
                 <button className="w-8 h-8 bg-gray-200 rounded-full text-gray-600">
                   -

@@ -29,15 +29,15 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="hover:underline">
+            <Link href="#" className="hover:underline">
               যোগাযোগ
-            </a>
-            <a href="#" className="hover:underline">
+            </Link>
+            <Link href="#" className="hover:underline">
               শর্তাবলী
-            </a>
-            <a href="#" className="hover:underline">
+            </Link>
+            <Link href="#" className="hover:underline">
               প্রাইভেসি পলিসি
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -55,25 +55,25 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-gray-800 hover:text-blue-500">
+            <Link href="#" className="text-gray-800 hover:text-blue-500">
               <FaFacebookF size={24} className="transition-all" />
-            </a>
-            <a href="#" className="text-gray-800 hover:text-red-500">
+            </Link>
+            <Link href="#" className="text-gray-800 hover:text-red-500">
               <FaYoutube size={24} className="transition-all" />
-            </a>
-            <a href="#" className="text-gray-800 hover:text-blue-500">
+            </Link>
+            <Link href="#" className="text-gray-800 hover:text-blue-500">
               <FaLinkedinIn size={24} className="transition-all" />
-            </a>
-            <a href="#" className="text-gray-800 hover:text-green-500">
+            </Link>
+            <Link href="#" className="text-gray-800 hover:text-green-500">
               <FaGithub size={24} className="transition-all" />
-            </a>
+            </Link>
           </div>
         </div>
         <hr className="mt-5"/>
 
         {/* Footer Bottom */}
         <div className="mt-3 text-center text-sm text-red-500">
-          <p>কপিরাইট © 2024 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</p>
+          <h1>কপিরাইট © 2024 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</h1>
         </div>
       </div>
     </footer>

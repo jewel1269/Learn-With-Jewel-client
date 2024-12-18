@@ -15,7 +15,7 @@ const AboutJewel = () => {
           <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
             {/* Left Text Section */}
             <div className="lg:w-1/2">
-              <p className="text-lg leading-relaxed text-black">
+              <h1 className="text-lg leading-relaxed text-black">
                 জুয়েল মিয়া একজন প্রযুক্তি উদ্যোক্তা। ব্লকচেইন প্রযুক্তির সঙ্গে
                 গড়ে তোলা ভবিষ্যৎ ২০০৮ সালে তিনি প্রতিষ্ঠা করেন বাংলাদেশের প্রথম
                 ডিজিটাল এজেন্সি - এনালাইজেনা। প্রোগ্রামিং এর প্রতি ভালোবাসা এবং
@@ -23,13 +23,13 @@ const AboutJewel = () => {
                 প্রতিষ্ঠা করেন লার্ন উইথ সুমিত প্ল্যাটফর্ম যেখানে প্রায় ৬০+
                 প্রফেশনাল রিমোট প্রজেক্ট চালানো হয়েছে। লার্ন উইথ সুমিত কমিউনিটি
                 চালানো একটি জনপ্রিয় প্ল্যাটফর্ম।
-              </p>
-              <p className="mt-4 font-medium text-black">
+              </h1>
+              <h1 className="mt-4 font-medium text-black">
                 <span className="text-green-500 font-bold">জুয়েল মিয়া</span>
                 <br />
                 প্রতিষ্ঠাতা - লার্ন উইথ জুয়েল
-              </p>
-              <p className="mt-2  gap-2">
+              </h1>
+              <h1 className="mt-2  gap-2">
                 <div className="flex items-center gap-2">
                   <Link href="/">
                     <span className="flex items-center cursor-pointer">
@@ -51,7 +51,7 @@ const AboutJewel = () => {
                 <span className="text-sm text-gray-400">
                   ড্রেড লাইসেন্স - TRAD/DNCC/009595/2022
                 </span>
-              </p>
+              </h1>
             </div>
 
             {/* Yellow Divider */}

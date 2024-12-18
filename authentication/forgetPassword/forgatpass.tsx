@@ -10,9 +10,9 @@ const ForgatPass = () => {
         <h2 className="text-3xl lg:text-4xl font-extrabold text-black mb-4 tracking-wide">
           <span className="text-green-500">পাসওয়ার্ড</span> ভুলে গেছেন?
         </h2>
-        <p className="text-md text-gray-900">
+        <h1 className="text-md text-gray-900">
           আপনার ইমেইল এড্রেস দিয়ে রিসেট করে নিন
-        </p>
+        </h1>
       </div>
 
       {/* Main Content */}
@@ -28,9 +28,9 @@ const ForgatPass = () => {
                 >
                   আপনার ইমেইল এড্রেস*
                 </label>
-                <p className="text-xs text-gray-500 mb-2">
+                <h1 className="text-xs text-gray-500 mb-2">
                   যে ইমেইল এড্রেস দিয়ে আপনি নিবন্ধন করেছিলেন।
-                </p>
+                </h1>
                 <input
                   type="email"
                   id="email"

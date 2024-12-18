@@ -65,12 +65,12 @@ const Testimonials: React.FC = () => {
           <span className="text-green-500">লার্নাররা</span> আমাদের সম্পর্কে যা
           ভাবেন
         </h2>
-        <p className="text-center mb-16">
+        <h1 className="text-center mb-16">
           লার্নাররা সর্বদাই লার্ন উইথ জুয়েল এর প্রতি তাদের ভালোবাসা প্রকাশ
           করেছেন
-        </p>
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -84,10 +84,10 @@ const Testimonials: React.FC = () => {
                 className="rounded-full mb-4 border-2 border-gray-600"
               />
               <h3 className="text-lg font-semibold mb-2">{testimonial.name}</h3>
-              <p className="text-sm text-black mb-2">
+              <h1 className="text-sm text-black mb-2">
                 commented on {testimonial.platform}
-              </p>
-              <p className="text-gray-800 text-center">{testimonial.comment}</p>
+              </h1>
+              <h1 className="text-gray-800 text-center">{testimonial.comment}</h1>
             </div>
           ))}
         </div>

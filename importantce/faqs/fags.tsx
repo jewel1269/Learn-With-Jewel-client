@@ -42,9 +42,9 @@ const FAQPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#070d17] text-white min-h-screen flex items-center justify-center px-6 py-12">
+    <div className="bg-white text-black min-h-screen flex items-center justify-center lg:px-6 py-12">
       <div className="max-w-4xl w-full">
-        <nav className="text-sm text-white mb-4 ">
+        <nav className="text-sm px-4 text-black mb-4 ">
           <Link href="/" className="hover:underline">
             হোম
           </Link>{" "}
@@ -61,7 +61,7 @@ const FAQPage: React.FC = () => {
               <h2 className="text-xl font-semibold text-green-500">
                 {faq.question}
               </h2>
-              <p className="mt-2 text-gray-300">{faq.answer}</p>
+              <h1 className="mt-2 text-gray-300">{faq.answer}</h1>
             </div>
           ))}
         </div>

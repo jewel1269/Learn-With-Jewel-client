@@ -50,9 +50,9 @@ const Register = () => {
                 >
                   আপনার নাম*
                 </label>
-                <p className="text-xs text-gray-400 mb-2">
+                <h1 className="text-xs text-gray-400 mb-2">
                   নাম দিয়ে আপনি নিবন্ধন করুন।
-                </p>
+                </h1>
                 <input
                   type="text"
                   id="name"
@@ -67,9 +67,9 @@ const Register = () => {
                 >
                   আপনার ইমেইল এড্রেস*
                 </label>
-                <p className="text-xs text-gray-400 mb-2">
+                <h1 className="text-xs text-gray-400 mb-2">
                   ইমেইল এড্রেস দিয়ে আপনি নিবন্ধন করুন।
-                </p>
+                </h1>
                 <input
                   type="email"
                   id="email"
@@ -85,10 +85,10 @@ const Register = () => {
                 >
                   পাসওয়ার্ড দিন*
                 </label>
-                <p className="text-xs text-gray-400 mb-2">
+                <h1 className="text-xs text-gray-400 mb-2">
                   পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে এবং সেখানে কমপক্ষে 1 টি
                   লেটার এবং 1 টি নাম্বার থাকতেই হবে।
-                </p>
+                </h1>
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
@@ -117,11 +117,11 @@ const Register = () => {
                 </button>
               </div>
             </form>
-            <p className="mt-6 text-center text-sm text-black">
+            <h1 className="mt-6 text-center text-sm text-black">
               <Link href="/login" className="text-black underline">
                 লগইন করুন
               </Link>
-            </p>
+            </h1>
           </div>
 
           {/* Right Side: Illustration */}

@@ -52,9 +52,9 @@ const CourseLayout: React.FC = () => {
   const selectedVideo = milestones[currentIndex];
 
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col md:flex-row">
+    <main className="min-h-screen bg-white text-black flex flex-col md:flex-row">
       {/* Sidebar */}
-      <aside className="w-full md:w-1/4 bg-gray-800 p-4 border-b md:border-b-0 md:border-r border-gray-700">
+      <aside className="w-full md:w-1/4 bg-white p-4 border-b md:border-b-0 md:border-r border-gray-700">
         <h2 className="text-lg font-bold mb-4">Running Module: 82</h2>
         <div className="space-y-4">
           {milestones.map((milestone, index) => (
@@ -64,13 +64,13 @@ const CourseLayout: React.FC = () => {
               className={`cursor-pointer p-3 rounded-md transition ${
                 currentIndex === index
                   ? "bg-green-500"
-                  : "bg-gray-700 hover:bg-gray-600"
+                  : "bg-gray-200 hover:bg-gray-600"
               }`}
             >
-              <p className="text-white font-medium">
-                <span className="text-red-500 font-bold">{index}.</span>{" "}
+              <div className="text-black font-medium">
+                <span className="text-red-500 font-bold">{index + 1}.</span>{" "}
                 {milestone.title}
-              </p>
+              </div>
             </div>
           ))}
         </div>
@@ -89,7 +89,7 @@ const CourseLayout: React.FC = () => {
         </header>
 
         {/* Video Section */}
-        <div className="bg-black h-[300px] md:h-[500px] rounded-lg flex items-center justify-center mb-6">
+        <div className="bg-white h-[300px] md:h-[500px] rounded-lg flex items-center justify-center mb-6">
           {selectedVideo.videoUrl.includes("youtube.com") ? (
             <iframe
               src={selectedVideo.videoUrl}
@@ -140,12 +140,12 @@ const CourseLayout: React.FC = () => {
           </button>
         </footer>
         {/* Copyright Warning */}
-        <div className="bg-gray-800 p-4 mt-10 rounded-lg">
+        <div className="bg-gray-300 p-4 mt-10 rounded-lg">
           <h2 className="text-lg text-red-500 font-bold">Copyright Warning</h2>
-          <p className="text-gray-400 mt-2">
+          <h1 className="text-gray-800 mt-2">
             All content in this course is protected by copyright law.
             Unauthorized distribution or reproduction is strictly prohibited.
-          </p>
+          </h1>
         </div>
       </div>
     </main>

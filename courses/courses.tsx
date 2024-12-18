@@ -105,11 +105,11 @@ const CoursesGrid = () => {
                   {course.status}
                 </span>
               </div>
-              <p className="text-sm mb-2 font-semibold">{course.category}</p>
-              <p className="text-sm mb-4">{course.description}</p>
-              <p className="text-xs text-gray-300">
+              <h1 className="text-sm mb-2 font-semibold">{course.category}</h1>
+              <h1 className="text-sm mb-4">{course.description}</h1>
+              <h1 className="text-xs text-gray-300">
                 Instructor: {course.teacher}
-              </p>
+              </h1>
             </div>
             <Link href={`/courseDetails/${course.id}`}>
               <button

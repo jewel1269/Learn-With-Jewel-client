@@ -25,7 +25,7 @@ const CardTwo: React.FC<CardProps> = ({
       <Image src={photo} width={200} className="rounded-xl" height={200} alt="Logo"/>
       </div>
       <h2 className="text-xl text-center font-bold mt-4">{title}</h2>
-      <p className="text-sm text-center mt-2">{description}</p>
+      <h1 className="text-sm text-center mt-2">{description}</h1>
       <a
         href={linkHref}
         className="text-blue-400 flex justify-center mt-4 underline"
