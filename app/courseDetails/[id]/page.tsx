@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import React from "react";
 
@@ -39,7 +40,7 @@ const courses = [
     location: "USA",
     learners: 95,
     date: "April 10, 2018",
-    image: "/images/codeigniter-course.jpg", // Add the image path
+    image: "/images/codeigniter-course.jpg", 
   },
 ];
 
@@ -71,16 +72,18 @@ const CourseDetails = () => {
 
         {/* Course Title and Enroll Button */}
         <div className="p-6 text-blavk">
-          <div className="flex justify-between text-white items-center">
+          <div className="flex justify-between text-black items-center">
             <div>
               <h1 className="text-2xl font-bold">{course.title}</h1>
               <h1 className="text-black text-sm">by {course.teacher}</h1>
             </div>
             <div className="text-right">
               <h1 className="text-red-500">{course.date}</h1>
+              <Link href={"/layout"}>
               <button className="mt-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
                 ENROLL NOW
               </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -84,11 +84,12 @@ const statusColors: Record<string, string> = {
 
 const CoursesGrid = () => {
   return (
-    <main className="text-black min-h-screen p-6 bg-white">
+    <div className="lg:px-16 bg-white">
+      <main className="text-black min-h-screen p-6 bg-white">
       <h1 className="text-3xl font-bold text-center mb-6">
         প্রিমিয়াম <span className="text-green-500">কোর্স</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {courses.map((course) => (
           <article
             key={course.id}
@@ -125,6 +126,7 @@ const CoursesGrid = () => {
         ))}
       </div>
     </main>
+    </div>
   );
 };
 

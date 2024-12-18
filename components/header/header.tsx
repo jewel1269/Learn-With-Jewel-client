@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-200  text-black  px-4 md:px-8 py-3 flex justify-between items-center">
+    <nav className="bg-gray-200 border lg:rounded-2xl rounded-xl shadow shadow-gray-400  text-black lg:px-28 sm:px-4 md:px-8 py-2 flex justify-between items-center">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link href="/">
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      <div className={`w-full md:hidden sm:hidden block lg:flex lg:w-auto lg:items-center lg:gap-8`}>
+      <div className="hidden lg:flex lg:w-auto lg:items-center lg:gap-8">
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 mt-4 lg:mt-0">
           <div className="relative">
             <button
@@ -100,9 +100,7 @@ const Navbar: React.FC = () => {
                   </h1>
                 </Link>
                 <Link href="/support">
-                  <h1 className="px-4 py-2  dark:hover:bg-gray-200">
-                    সাপোর্ট
-                  </h1>
+                  <h1 className="px-4 py-2  dark:hover:bg-gray-200">সাপোর্ট</h1>
                 </Link>
                 <Link href="/faq">
                   <h1 className="px-4 py-2 dark:hover:bg-gray-200">
@@ -241,7 +239,7 @@ const Navbar: React.FC = () => {
           <FaMoon className="text-blue-400" />
         </button>
         <Link href="/login">
-          <h1 className="px-3 py-1 border rounded-full hover:text-red-500 dark:hover:bg-blue-700 transition">
+          <h1 className="px-3 py-1 border border-gray-400  rounded-full hover:text-red-500 hover:font-bold transition">
             লগইন
           </h1>
         </Link>
