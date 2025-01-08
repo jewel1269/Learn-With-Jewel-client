@@ -49,7 +49,7 @@ const testimonials = [
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-[#E8F6F3]">
         <div className=" lg:-mt-72 lg:mb-8">
       <div className="flex justify-center">
         <Image

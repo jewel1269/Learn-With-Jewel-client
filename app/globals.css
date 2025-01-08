@@ -3,18 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --bg: #f9fafb;
-  --text: #111827;
-}
-
-.dark {
-  --bg: #0d1117;
-  --text: #ffffff;
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+  background-color: #e8f6f3;
 }
 

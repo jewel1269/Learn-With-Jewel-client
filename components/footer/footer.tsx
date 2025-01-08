@@ -7,7 +7,7 @@ import payment from "@/images/payment.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 border border-gray-200 rounded-3xl text-black py-8">
+    <footer className="bg-[#008080] border border-gray-200 rounded-3xl text-black py-8">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -55,24 +55,24 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
-            <Link href="#" className="text-gray-800 hover:text-blue-500">
+            <Link href="#" className="text-blue-700">
               <FaFacebookF size={24} className="transition-all" />
             </Link>
-            <Link href="#" className="text-gray-800 hover:text-red-500">
+            <Link href="#" className="text-red-500">
               <FaYoutube size={24} className="transition-all" />
             </Link>
-            <Link href="#" className="text-gray-800 hover:text-blue-500">
+            <Link href="#" className="text-black">
               <FaLinkedinIn size={24} className="transition-all" />
             </Link>
-            <Link href="#" className="text-gray-800 hover:text-green-500">
+            <Link href="#" className="text-green-500">
               <FaGithub size={24} className="transition-all" />
             </Link>
           </div>
         </div>
-        <hr className="mt-5"/>
+        <hr className="mt-5" />
 
         {/* Footer Bottom */}
-        <div className="mt-3 text-center text-sm text-red-500">
+        <div className="mt-3 text-center text-sm text-white">
           <h1>কপিরাইট © 2024 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</h1>
         </div>
       </div>

@@ -11,7 +11,7 @@ const AboutJewel = () => {
       </h2>
 
       <div>
-        <main className="bg-white min-h-screen text-custom-text py-8">
+        <main className=" min-h-screen text-custom-text py-8">
           <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
             {/* Left Text Section */}
             <div className="lg:w-1/2">
@@ -36,7 +36,7 @@ const AboutJewel = () => {
                       <Image
                         src={logo}
                         alt="Learn with Jewel Logo"
-                        className="h-12 -ml-4 w-20"
+                        className="h-12 -ml-4 w-20 "
                         width={350}
                         height={350}
                       />
@@ -65,7 +65,7 @@ const AboutJewel = () => {
                 alt="Founder Jewel Mia"
                 width={320}
                 height={420}
-                className="rounded-lg w-80 h-96 object-cover transform hover:rotate-0 transition-transform duration-300 shadow-lg"
+                className="rounded-lg w-80 h-96 object-cover transform hover:-rotate-3 transition-transform duration-700 hover:ease-out shadow-lg"
               />
             </div>
           </section>

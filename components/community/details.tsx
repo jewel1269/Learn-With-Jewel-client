@@ -3,14 +3,13 @@ import Card from "./card";
 import VideoEmbed from "./video";
 import CardTwo from "./card2";
 
-
 export default function Home() {
   return (
     <>
       <Head>
         <title>Community Configuration</title>
       </Head>
-      <main className="bg-white   min-h-screen text-black">
+      <main className="min-h-screen text-black">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row border border-gray-700 rounded-lg justify-between items-center p-5 gap-8 lg:gap-4 max-w-7xl mx-auto">
           <div className="lg:w-1/2 text-center lg:text-left">

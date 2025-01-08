@@ -1,35 +1,37 @@
 import Image from "next/image";
 import React from "react";
-import banner from "@/images/banner2.jpg.png";
 
 const Banner = () => {
   return (
-    <div className="relative w-full  h-[400px] md:h-[500px] lg:h-[700px]">
-      {/* Banner Image */}
+    <div className="font-sans flex justify-center items-center lg:mt-4">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-rose-50 via-white to-red-100 lg:w-[1250px] py-8 px-12 lg:px-20 border border-black rounded-2xl max-w-8xl shadow-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+          {/* Left Content */}
+          <div>
+            <h1 className="text-4xl font-bold text-black">
+              বাংলাদেশ শিখবে <span className="text-yellow-300">লাইভ</span> 🔴
+            </h1>
+            <p className="text-black mt-4">
+              কিনুন শেখার মাধ্যমে বানান আপনার ফিউচার ব্রাইট
+            </p>
+            <button className="bg-yellow-400 text-black px-6 py-3 mt-6 rounded-md hover:bg-yellow-500 transition duration-300">
+              শেখা শুরু করুন →
+            </button>
+            <p className="text-black text-sm mt-4">
+              ১০০০+ গ্রাজুয়েটরা কাজ করছে বিভিন্ন দেশি ও বিদেশি প্রতিষ্ঠানে:
+            </p>
+          </div>
 
-      <Image
-        src={banner}
-        alt="Banner"
-        layout="fill"
-        objectFit="cover"
-        priority
-        className="brightness-75 blur-md"
-      />
-
-
-      {/* Cards */}
-      <div className="absolute inset-0 flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0 lg:space-x-8">
-        <div className=" p-6 border-2 border-black rounded shadow-lg w-[250px] sm:w-[300px] md:w-[350px] text-center">
-          <h2 className="text-xl font-semibold text-black">Card 1</h2>
-          <h2 className="text-black">
-            This is the first card inside the banner.
-          </h2>
-        </div>
-        <div className=" p-6 border-2 border-black  rounded shadow-lg w-[250px] sm:w-[300px] md:w-[350px] text-center">
-          <h2 className="text-xl font-semibold text-balck">Card 2</h2>
-          <h2 className="text-black">
-            This is the second card inside the banner.
-          </h2>
+          {/* Right Content */}
+          <div className="relative bg-gradient-to-br from-gray-400 via-gray-300 to-gray-200 h-72 lg:h-80 rounded-md shadow-md">
+            <Image
+              src="/placeholder-image.png"
+              alt="A banner image showcasing learning opportunities"
+              fill
+              className="object-cover rounded-md"
+            />
+          </div>
         </div>
       </div>
     </div>
