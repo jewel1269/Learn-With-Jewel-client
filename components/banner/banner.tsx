@@ -26,10 +26,10 @@ const Banner = () => {
           {/* Right Content */}
           <div className="relative bg-gradient-to-br from-gray-400 via-gray-300 to-gray-200 h-72 lg:h-80 rounded-md shadow-md">
             <Image
-              src="/placeholder-image.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfy6UUJ38VnmN10F_ZYXn65OOCfNgMtkcs8Q&s"
               alt="A banner image showcasing learning opportunities"
               fill
-              className="object-cover rounded-md"
+              className="object-cover rounded-2xl shadow"
             />
           </div>
         </div>

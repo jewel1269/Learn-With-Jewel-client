@@ -1,12 +1,12 @@
-
-
+import CourseFeatures from "@/courses/CourseFeatures/courseFeatures";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CourseDetails = () => {
   return (
-    <div className=" py-8 px-4">
-      <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    <div className=" bg-gray-50 py-8 px-4">
+      <div className="max-w-7xl mx-auto border border-gray-400 lg:p-3  rounded-lg shadow-md overflow-hidden">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row">
           {/* Left Section */}
@@ -38,10 +38,14 @@ const CourseDetails = () => {
 
             {/* Buttons */}
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <button className="bg-yellow-500 text-white font-bold px-6 py-2 rounded-lg hover:bg-yellow-600">
-                ১০ম ব্যাচ ভর্তি হোন
-              </button>
-              <span className="text-2xl font-bold text-gray-700"><span className="text-2xl font-extrabold">৳</span>৮,০০০</span>
+              <Link href={"/payment"}>
+                <button className="bg-yellow-500 text-white font-bold px-6 py-2 rounded-lg hover:bg-yellow-600">
+                  ১০ম ব্যাচ ভর্তি হোন
+                </button>
+              </Link>
+              <span className="text-2xl font-bold text-gray-700">
+                <span className="text-2xl font-extrabold">৳</span>৮,০০০
+              </span>
               <span className="text-sm text-gray-600">প্রোমো কোড</span>
             </div>
 
@@ -106,6 +110,7 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
+      <CourseFeatures />
     </div>
   );
 };

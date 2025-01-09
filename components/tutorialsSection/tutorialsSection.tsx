@@ -6,6 +6,7 @@ import {
   FaDatabase,
   FaPaintBrush,
 } from "react-icons/fa";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
 const TutorialsSection: React.FC = () => {
   const courses = [
@@ -140,9 +141,9 @@ const TutorialsSection: React.FC = () => {
         </div>
 
         {/* See More Button */}
-        <div className="mt-8 text-center">
-          <button className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-            সব দেখুন
+        <div className="mt-8 flex justify-center text-center">
+          <button className="px-6 flex justify-center gap-2 items-center py-2 bg-gray-200 text-black hover:text-white rounded-md hover:bg-blue-600">
+            সব দেখুন <FaArrowTrendUp />
           </button>
         </div>
       </div>

@@ -1,19 +1,15 @@
 import React from "react";
 import Banner from "../banner/banner";
 import TutorialsSection from "../tutorialsSection/tutorialsSection";
-import Community from "../community/community";
-import Details from "../community/details";
-import AboutJewel from "../aboutJewel/aboutJewel";
 import Testimonials from "../testimonials/testimonials";
+import FeaturesAndStats from "../featuresAndStats/featuresAndStats";
 
 const HomeScreen = () => {
   return (
     <div>
       <Banner />
       <TutorialsSection />
-      <Community />
-      <Details />
-      <AboutJewel />
+      <FeaturesAndStats/>
       <Testimonials />
     </div>
   );
