@@ -118,7 +118,7 @@ const Register = () => {
               </div>
             </form>
             <h1 className="mt-6 text-center text-sm text-black">
-              <Link href="/login" className="text-black underline">
+              <Link href="/routes/login" className="text-black underline">
                 লগইন করুন
               </Link>
             </h1>

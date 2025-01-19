@@ -101,13 +101,13 @@ const Login = () => {
             <div className="flex justify-between items-center">
               <div className="mt-6 text-center text-sm text-gray-400">
                 <Link
-                  href="/passForget"
+                  href="/routes/passForget"
                   className="text-red-500 hover:underline"
                 >
                   পাসওয়ার্ড ভুল গেছেন?
                 </Link>
               </div>
-              <Link href={"/registration"}>
+              <Link href={"/routes/registration"}>
                 <h1 className="underline mt-6 text-green-300 text-sm">নিবন্ধন করুন</h1>
               </Link>
             </div>

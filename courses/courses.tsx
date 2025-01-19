@@ -112,7 +112,7 @@ const CoursesGrid = () => {
                 Instructor: {course.teacher}
               </h1>
             </div>
-            <Link href={`/courseDetails/${course.id}`}>
+            <Link href={`/details/courseDetails/${course.id}`}>
               <button
                 className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:scale-105 hover:shadow-lg transition transform duration-300"
                 aria-label={`${
