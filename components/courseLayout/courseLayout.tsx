@@ -122,7 +122,7 @@ const CourseLayout: React.FC = () => {
             className={`px-4 py-2 rounded transition w-full md:w-auto ${
               currentIndex === 0
                 ? "bg-gray-600 cursor-not-allowed"
-                : "bg-red-500 hover:bg-gray-600"
+                : "bg-yellow-400 hover:bg-gray-600"
             }`}
           >
             Previous

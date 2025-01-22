@@ -6,7 +6,7 @@ import logo from "@/images/logo-removebg-preview.png";
 const AboutJewel = () => {
   return (
     <div>
-      <h2 className="text-3xl text-center font-bold text-black mb-4">
+      <h2 className="text-3xl text-center font-bold text-black mt-3 mb-4">
         প্রতিষ্ঠাতা সম্পর্কে কিছু কথা
       </h2>
 

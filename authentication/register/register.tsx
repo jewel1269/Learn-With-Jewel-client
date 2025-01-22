@@ -16,10 +16,9 @@ const Register = () => {
     const password = (form.elements.namedItem("password") as HTMLInputElement)
       .value;
 
-      if (password.length < 8) {
-        toast.error("Password must be at least 8 characters long");
-      }
-      
+    if (password.length < 8) {
+      toast.error("Password must be at least 8 characters long");
+    }
 
     const userInformation = { name, email, password };
     console.log("User Information: ", userInformation);
@@ -36,10 +35,10 @@ const Register = () => {
           আপনার নিবন্ধন তথ্য কারো সাথে শেয়ার করবেন না
         </p>
       </div>
-    <Toaster/>
+      <Toaster />
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-10 px-4">
-        <div className="max-w-6xl w-full flex justify-center flex-col lg:flex-row  rounded-lg shadow-2xl overflow-hidden">
+        <div className="max-w-6xl w-full flex justify-center flex-col lg:flex-row  rounded-lg  overflow-hidden">
           {/* Left Side: Form */}
           <div className=" p-8 lg:p-10">
             <form onSubmit={handleRegistration}>
@@ -56,7 +55,7 @@ const Register = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-1 border border-gray-600 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 border border-gray-900 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                   placeholder="আপনার নাম"
                 />
               </div>
@@ -73,7 +72,7 @@ const Register = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-1 border border-gray-600 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                  className="w-full px-4 py-1 border border-gray-900 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
                   placeholder="আপনার ইমেইল"
                 />
               </div>
@@ -81,7 +80,7 @@ const Register = () => {
               <div className="mb-6">
                 <label
                   htmlFor="password"
-                  className="block text-md font-medium text-gray-900 mb-2"
+                  className="block text-md font-bold text-gray-900 mb-2"
                 >
                   পাসওয়ার্ড দিন*
                 </label>
@@ -93,16 +92,16 @@ const Register = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    className="w-full px-4 py-1 pr-10 border border-gray-600 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4fa0ec] placeholder-gray-500"
+                    className="w-full px-4 py-1 pr-10 border border-gray-700  text-black rounded-lg  placeholder-gray-500"
                     placeholder="Password"
                   />
-                  <div className="relative ml-96">
+                  <div>
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute  inset-y-0 right-3 flex items-center text-gray-400 hover:text-[#4fa0ec]"
+                      className="absolute top-1/2 h-5 w-5 right-3 transform -translate-y-1/2 text-gray-400 hover:text-[#4fa0ec]"
                     >
-                      {showPassword ? "🙈" : "👁️"}
+                      {showPassword ? "⚡" : "👁️"}
                     </button>
                   </div>
                 </div>
@@ -111,7 +110,7 @@ const Register = () => {
               <div className="">
                 <button
                   type="submit"
-                  className=" py-1  mt-4 border w-40 px-3   border-gray-400  text-green-500 hover:bg-red-500 hover:text-red-500 font-semibold rounded-xl"
+                  className=" py-1  mt-4 border w-40 px-3 bg-transparent transition duration-200  border-gray-400  text-green-500 hover:bg-slate-300 hover:text-red-500 font-semibold rounded-xl"
                 >
                   নিবন্ধন করুন
                 </button>

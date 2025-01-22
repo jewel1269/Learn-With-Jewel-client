@@ -89,7 +89,7 @@ const Testimonials: React.FC = () => {
         </div>
       </div>
       <div className="mt-8 flex mb-4 justify-center text-center">
-        <button className="px-6 flex justify-center gap-2 items-center py-2 bg-gray-200 text-black hover:text-white rounded-md hover:bg-blue-600">
+        <button className="px-6 flex justify-center gap-2 items-center py-2 bg-gray-400 text-black bg-transparent transition duration-200 rounded-md hover:bg-yellow-400">
           সব দেখুন <FaArrowTrendUp />
         </button>
       </div>

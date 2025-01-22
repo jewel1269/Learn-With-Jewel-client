@@ -4,7 +4,7 @@ import React from "react";
 
 const Term = () => {
   return (
-    <div className="text-black bg-white min-h-screen py-8 px-4 md:px-16">
+    <div className="text-black bg-white min-h-screen py-8 lg:px-4 px-2 md:px-16">
       {/* Breadcrumb */}
      <div className="max-w-7xl flex flex-col justify-center mx-auto">
      <nav className="text-sm lg:ml-20 text-black mb-4">
@@ -23,7 +23,7 @@ const Term = () => {
       </header>
 
       {/* Content */}
-      <article className="text-black lg:px-44 rounded-lg p-6 md:p-10  leading-relaxed">
+      <article className="text-black lg:px-44 rounded-lg lg:p-6 p-3 md:p-10  leading-relaxed">
         <li>
           🎯 আমার অধিকারগুলো জানুন বিধিমালা এবং লার্ন উইথ জুয়েল অধিকারসম্পর্কিত
           বিধিমালায় আপনার ব্যবসায়িক কৌশল রূপান্তরিত এর গুরুত্বের কথা বলা

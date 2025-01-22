@@ -11,6 +11,7 @@ const nextConfig = {
       "via.placeholder.com",
       "cdn-icons-png.freepik.com",
       "cdn-icons-png.flaticon.com",
+      "images.unsplash.com"
     ],
   },
   reactStrictMode: true,

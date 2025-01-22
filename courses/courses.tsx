@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaVideo } from "react-icons/fa";
 
 // কোর্সের তথ্য
 const courses = [
@@ -106,14 +107,14 @@ const CoursesGrid = () => {
   return (
     <div className="lg:px-16 py-8 bg-gray-50 min-h-screen">
       <main className="p-6">
-        <h1 className="text-4xl font-bold text-center mb-10">
+        <h1 className="lg:text-4xl text-3xl font-bold text-center mb-10">
           প্রিমিয়াম <span className="text-green-500">কোর্সসমূহ</span>
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {courses.map((course) => (
             <article
               key={course.id}
-              className="shadow-md border bg-white rounded-xl p-6 flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              className="shadow-md border bg-white rounded-xl  flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-lg"
             >
               <div>
                 <div className="flex justify-center">
@@ -122,43 +123,44 @@ const CoursesGrid = () => {
                     alt={course.title}
                     width={400}
                     height={300}
-                    className="rounded-lg mb-4 h-40 w-64"
+                    className="rounded-lg mb-4 lg:h-40 h-20 w-full object-cover"
                   />
                 </div>
-                <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-xl font-bold">{course.title}</h2>
+                <div className="flex p-2 justify-between items-center mb-4">
+                  <h2 className="lg:text-lg text-sm sm:text-xl font-bold">
+                    {course.title}
+                  </h2>
                   <span
-                    className={`text-sm px-3 py-1 rounded-full font-medium ${
+                    className={`text-xs sm:text-sm px-3 py-1  rounded-full font-medium ${
                       statusColors[course.status]
                     }`}
                   >
                     {course.status}
                   </span>
                 </div>
-                <h3 className="text-sm font-semibold text-gray-600 mb-2">
+                <h3 className="text-sm px-2 sm:text-base font-semibold text-gray-600 mb-2">
                   {course.category}
                 </h3>
-                <p className="text-sm text-gray-700 mb-4">
+                <p className="text-xs px-2 sm:text-sm text-gray-700 lg:mb-4">
                   {course.description}
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs px-2 font-bold sm:text-sm text-gray-900">
                   শিক্ষক: <span className="font-medium">{course.teacher}</span>
                 </p>
               </div>
-              <Link href={`/details/courseDetails/${course.id}`}>
-                <button
-                  className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200"
-                  aria-label={`${
-                    course.status === "সমাপ্ত"
-                      ? "পুরস্কার দাবি করুন"
-                      : "কোর্স চালিয়ে যান"
-                  } ${course.title}`}
-                >
-                  {course.status === "সমাপ্ত"
-                    ? "পুরস্কার দাবি করুন"
-                    : "চালিয়ে যান"}
-                </button>
-              </Link>
+              <div className="px-2 mb-2">
+                <Link href={`/details/courseDetails/${course.id}`}>
+                  <button
+                    className="flex items-center gap-2 w-full justify-center text-black lg:text-lg border border-gray-300 bg-slate-100 text-xs text-center font-medium px-3 py-1 rounded-md hover:bg-gray-200 transition duration-200"
+                    aria-label={`${
+                      course.status === "সমাপ্ত" ? "সমাপ্ত" : "দেখুন"
+                    } ${course.title}`}
+                  >
+                    <FaVideo className="text-lg text-center text-gray-600" />
+                    {course.status === "সমাপ্ত" ? "সমাপ্ত" : "দেখুন"}
+                  </button>
+                </Link>
+              </div>
             </article>
           ))}
         </div>

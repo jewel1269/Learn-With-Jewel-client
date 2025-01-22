@@ -44,14 +44,14 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`w-full sticky top-0 left-0 z-50 transition-all duration-700 ${
+      className={`w-full sticky top-0 left-0 z-50 transition-all  duration-700 ${
         isScrolled ? "shadow-md bg-white dark:bg-gray-800" : "bg-transparent"
       }`}
     >
-      <div className="lg:px-10">
-        <nav className="border bg-slate-200 shadow-gray-300 dark:bg-gray-800 lg:rounded-full  rounded-xl shadow text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
+      <div className="lg:px-10 ">
+        <nav className="border bg-slate-200 shadow-gray-300 dark:bg-gray-800 lg:rounded-full lg:h-12 lg:mt-2   rounded-xl shadow-2xl text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center  gap-2">
             <Link href="/">
               <span className="flex items-center gap-2 cursor-pointer">
                 <Image
@@ -109,6 +109,9 @@ const Navbar: React.FC = () => {
                 { href: "/routes/faq", text: "প্রশ্নোত্তর" },
               ]}
             />
+            <Link href="/routes/blog" className="text-sm font-bold">
+              ব্লগ
+            </Link>
             <Link href="/routes/jewel" className="text-sm font-bold">
               প্রতিষ্ঠাতা
             </Link>
@@ -116,19 +119,19 @@ const Navbar: React.FC = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 shadow-md hover:scale-105 transition"
+              className="p-1 rounded-full bg-gray-200 border border-slate-400 dark:bg-gray-700 shadow-md hover:scale-105 transition"
             >
               {isDarkMode ? (
-                <FaSun className="text-yellow-400" />
+                <FaSun className="text-blue-500" />
               ) : (
-                <FaMoon className="text-blue-500" />
+                <FaMoon className=" text-yellow-400" />
               )}
             </button>
 
             {/* Login Button */}
             <Link
-              href="/login"
-              className="bg-blue-600 text-white px-4 py-1 rounded-full shadow-md hover:bg-blue-700 transition"
+              href="/routes/login"
+              className="bg-yellow-400 text-black px-4 py-1 rounded-full shadow-md hover:bg-yellow-500 transition"
             >
               লগইন
             </Link>
@@ -198,8 +201,8 @@ const Navbar: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/login"
-                  className="block text-center bg-blue-600 text-white py-1 rounded shadow-md"
+                  href="/routes/login"
+                  className="block text-center bg-yellow-400 text-black py-1 rounded shadow-md"
                 >
                   লগইন
                 </Link>

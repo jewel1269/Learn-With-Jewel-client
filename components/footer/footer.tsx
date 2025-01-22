@@ -2,12 +2,12 @@ import Image from "next/image";
 import { FaFacebookF, FaYoutube, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 import Link from "next/link";
-import logo from "@/images/logo-removebg-preview.png";
 import payment from "@/images/payment.jpg";
+import logo from "@/images/jewel-removebg-preview.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#008080] border border-gray-200 rounded-3xl text-black py-8">
+    <footer className="bg-yellow-50 border border-gray-100 text-black py-8">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -17,7 +17,7 @@ const Footer = () => {
                 <Image
                   src={logo}
                   alt="Learn with Jewel Logo"
-                  className="h-12 w-20"
+                  className="h-20 w-20"
                   width={400}
                   height={400}
                 />
@@ -72,8 +72,8 @@ const Footer = () => {
         <hr className="mt-5" />
 
         {/* Footer Bottom */}
-        <div className="mt-3 text-center text-sm text-white">
-          <h1>কপিরাইট © 2024 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</h1>
+        <div className="mt-3 text-center text-sm text-red-500">
+          <h1>কপিরাইট © 2025 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</h1>
         </div>
       </div>
     </footer>
