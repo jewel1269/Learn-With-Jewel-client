@@ -3,104 +3,105 @@ import React from "react";
 
 const PaymentPage: React.FC = () => {
   return (
-    <div className="bg-gray-50 min-h-screen p-4">
-      <div className="max-w-5xl mx-auto bg-white shadow-md rounded-md p-6">
+    <div className="bg-gray-50 min-h-screen p-6">
+      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
         {/* Header */}
-        <div className="flex items-center mb-6">
-          <button className="text-green-600 font-medium">
-            &larr; আমার কার্ট
+        <div className="flex items-center justify-between mb-8">
+          <button className="text-green-600 font-medium text-lg flex items-center gap-2">
+            &larr; <span>আমার কোর্স</span>
           </button>
+          <h1 className="text-2xl font-bold text-gray-800">পেমেন্ট ডিটেইলস</h1>
         </div>
 
         {/* Progress Bar */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-10">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
               1
             </div>
-            <span className="text-green-600 font-medium">
-              অর্ডার কনফার্মেশন
+            <span className="text-green-600 font-medium text-lg">
+              কোর্স নির্বাচন
             </span>
           </div>
-          <span className="text-gray-400">...</span>
+          <div className="w-16 h-1 bg-gray-300"></div>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-gray-300 text-white rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center font-bold">
               2
             </div>
-            <span className="text-gray-400">পেমেন্ট</span>
+            <span className="text-gray-500 text-lg">পেমেন্ট</span>
           </div>
         </div>
 
-        {/* Cart Items */}
-        <div className="flex flex-col lg:flex-row gap-6">
+        {/* Course Details */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Section */}
-          <div className="flex-1">
-            <div className="flex gap-4 items-start">
+          <div className="col-span-2">
+            <div className="flex gap-6 items-start">
               <Image
-                fill
-                src="https://via.placeholder.com/100"
-                alt="Product"
-                className="w-24 h-24 rounded-md object-cover"
+                src="https://via.placeholder.com/150"
+                alt="Course Image"
+                width={150}
+                height={150}
+                className="rounded-lg object-cover"
               />
               <div>
-                <h2 className="text-lg font-semibold text-gray-800">
-                  HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ,...)
+                <h2 className="text-xl font-bold text-gray-800 mb-2">
+                  ওয়েব ডেভেলপমেন্ট ফুলস্ট্যাক মাস্টারক্লাস
                 </h2>
-                <p className="text-gray-600">
-                  PCMB কমপ্লিট প্যাকেজ (Cycle 1-4) + BEI 2.0 কমপ্লিট প্যাকেজ
+                <p className="text-gray-700 mb-4">
+                  এই কোর্সটি HTML, CSS, JavaScript, React, এবং Node.js-এর গভীর
+                  ধারণা প্রদান করবে। এটি সম্পূর্ণ শুরু থেকে শেষ পর্যন্ত ডিজাইন
+                  করা হয়েছে।
                 </p>
+                <h3 className="font-semibold text-gray-800 mb-2">
+                  🎓 কোর্সের বেনিফিট:
+                </h3>
+                <ul className="list-disc ml-5 text-gray-700">
+                  <li>২০+ ঘন্টার লাইভ ক্লাস</li>
+                  <li>ইন্ডাস্ট্রি-রেডি প্রজেক্ট</li>
+                  <li>ফ্রন্টএন্ড এবং ব্যাকএন্ড টেকনোলজির ওপর দখল</li>
+                  <li>লাইফটাইম কোর্স অ্যাক্সেস</li>
+                </ul>
               </div>
-            </div>
-
-            <div className="mt-4">
-              <h3 className="font-medium text-gray-800 mb-2">
-                🎁 এই প্রোডাক্টের সাথে পাচ্ছেন -
-              </h3>
-              <ul className="space-y-2">
-                <li className="text-gray-700">
-                  HSC 25 অনলাইন ব্যাচ - বাংলা 2.0
-                </li>
-                <li className="text-gray-700">
-                  HSC 25 অনলাইন ব্যাচ - ইংরেজি 2.0
-                </li>
-                <li className="text-gray-700">HSC 25 অনলাইন ব্যাচ - ICT 2.0</li>
-              </ul>
             </div>
           </div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-80 bg-gray-100 rounded-md p-4">
+          <div className="bg-gray-100 rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              পেমেন্ট সামারি
+            </h3>
             <div className="flex justify-between text-gray-800 font-medium mb-3">
-              <span>প্রোডাক্টের মূল্য</span>
-              <span>৳9000</span>
+              <span>কোর্স মূল্য</span>
+              <span>৳১৫০০০</span>
             </div>
             <div className="flex justify-between text-red-600 font-medium mb-3">
               <span>ডিসকাউন্ট</span>
-              <span>-৳2000</span>
+              <span>-৳৫০০০</span>
             </div>
-            <div className="border-t border-gray-300 my-3"></div>
-            <div className="flex justify-between text-gray-800 font-bold text-lg">
-              <span>সর্বমোট (ভ্যাট সহ)</span>
-              <span>৳7000</span>
+            <div className="border-t border-gray-300 my-4"></div>
+            <div className="flex justify-between text-gray-800 font-bold text-xl">
+              <span>সর্বমোট</span>
+              <span>৳১০০০০</span>
             </div>
 
-            <button className="w-full bg-green-600 text-white py-2 mt-6 rounded-md font-medium hover:bg-green-700">
-              শুরু করুন
+            <button className="w-full bg-green-600 text-white py-3 mt-6 rounded-lg text-lg font-medium hover:bg-green-700 transition duration-200">
+              পেমেন্ট সম্পন্ন করুন
             </button>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="text-center text-gray-600 text-sm mt-6">
-        <p>প্রাইভেসি পলিসি - ব্যবহারকারীর শর্তাবলী - রিফান্ড পলিসি</p>
+      <footer className="text-center text-gray-500 text-sm mt-10">
+        <p>প্রাইভেসি পলিসি | ব্যবহারের শর্তাবলী | রিফান্ড পলিসি</p>
         <p className="mt-2">
           <a href="tel:16910" className="text-green-600 font-medium">
-            কল করুন: 16910
+            হেল্পলাইন: ১৬৯১০
           </a>{" "}
-          (24x7)
+          (২৪/৭ সাপোর্ট)
         </p>
-      </div>
+      </footer>
     </div>
   );
 };

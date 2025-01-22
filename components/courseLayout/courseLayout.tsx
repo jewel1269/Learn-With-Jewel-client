@@ -52,7 +52,7 @@ const CourseLayout: React.FC = () => {
   const selectedVideo = milestones[currentIndex];
 
   return (
-    <main className="min-h-screen bg-white text-black flex flex-col md:flex-row">
+    <main className="min-h-screen bg-white text-black flex flex-col-reverse lg:px-10 md:flex-row">
       {/* Sidebar */}
       <aside className="w-full md:w-1/4 bg-white p-4 border-b md:border-b-0 md:border-r border-gray-700">
         <h2 className="text-lg font-bold mb-4">Running Module: 82</h2>

@@ -6,7 +6,8 @@ const Term = () => {
   return (
     <div className="text-black bg-white min-h-screen py-8 px-4 md:px-16">
       {/* Breadcrumb */}
-      <nav className="text-sm text-black mb-4">
+     <div className="max-w-7xl flex flex-col justify-center mx-auto">
+     <nav className="text-sm lg:ml-20 text-black mb-4">
         <Link href="/" className="text-black hover:underline">
           হোম 
         </Link>{" "}
@@ -22,7 +23,7 @@ const Term = () => {
       </header>
 
       {/* Content */}
-      <article className="text-black   shadow-md rounded-lg p-6 md:p-10  leading-relaxed">
+      <article className="text-black lg:px-44 rounded-lg p-6 md:p-10  leading-relaxed">
         <li>
           🎯 আমার অধিকারগুলো জানুন বিধিমালা এবং লার্ন উইথ জুয়েল অধিকারসম্পর্কিত
           বিধিমালায় আপনার ব্যবসায়িক কৌশল রূপান্তরিত এর গুরুত্বের কথা বলা
@@ -70,6 +71,7 @@ const Term = () => {
           করবেন না!
         </li>
       </article>
+     </div>
     </div>
   );
 };

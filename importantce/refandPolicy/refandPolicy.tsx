@@ -6,7 +6,8 @@ const Refand = () => {
   return (
     <div className="text-black bg-white min-h-screen py-8 px-4 md:px-16">
       {/* Breadcrumb */}
-      <nav className="text-sm text-black mb-4">
+     <div className="max-w-7xl flex flex-col justify-center mx-auto">
+     <nav className="text-sm lg:ml-20 text-black mb-4">
         <Link href="/" className="hover:underline ">
           হোম
         </Link>{" "}
@@ -19,7 +20,7 @@ const Refand = () => {
       </header>
 
       {/* Content */}
-      <div className="text-white  flex flex-col justify-center  dark:text-black  shadow-md rounded-lg p-6 md:p-10  leading-relaxed">
+      <div className="text-black lg:px-52 flex flex-col justify-center  dark:text-black   rounded-lg p-6 md:p-10  leading-relaxed">
         <h1>
           🎯 লার্ন উইথ জুয়েল থেকে কোর্স কেনার পরে কোন রকমের রিফান্ড
           রিকোয়েস্ট গ্রহণযোগ্য নয়।
@@ -32,6 +33,7 @@ const Refand = () => {
           কন্টেন্ট ডিটেইলস গুলো ভালো করে চেক করে নেবেন।
         </h1>
       </div>
+     </div>
     </div>
   );
 };

@@ -38,7 +38,7 @@ const CourseDetails = () => {
 
             {/* Buttons */}
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Link href={"/payment"}>
+              <Link href={"/routes/payment"}>
                 <button className="bg-yellow-500 text-white font-bold px-6 py-2 rounded-lg hover:bg-yellow-600">
                   ১০ম ব্যাচ ভর্তি হোন
                 </button>
@@ -108,6 +108,11 @@ const CourseDetails = () => {
           <div className="border border-gray-300 px-4 py-2 rounded text-gray-700">
             ✅ ভর্তি চলছে: ১০ম ব্যাচ
           </div>
+          <Link href={"/routes/layout"}>
+            <div className="border border-red-500 font-bold px-4 py-2 rounded text-gray-700">
+              ✅ কোর্স প্ল্যান দেখুন
+            </div>
+          </Link>
         </div>
       </div>
       <CourseFeatures />

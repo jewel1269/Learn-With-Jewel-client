@@ -28,8 +28,9 @@ const Banner = () => {
             <Image
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfy6UUJ38VnmN10F_ZYXn65OOCfNgMtkcs8Q&s"
               alt="A banner image showcasing learning opportunities"
-              fill
-              className="object-cover rounded-2xl shadow"
+              height={800}
+              width={700}
+              className="object-cover bg-cover rounded-2xl shadow"
             />
           </div>
         </div>

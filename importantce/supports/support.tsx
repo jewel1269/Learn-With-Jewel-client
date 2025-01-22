@@ -5,7 +5,7 @@ import React from "react";
 const SupportPage: React.FC = () => {
   return (
     <div className="bg-white lg:px-10 min-h-screen px-6 py-12">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <nav className="text-sm text-black mb-4">
           <Link href="/" className="hover:underline">
             হোম
@@ -38,7 +38,7 @@ const SupportPage: React.FC = () => {
             ।
           </h1>
 
-          <h1 className="mb-4 text-gray-300 leading-relaxed">
+          <h1 className="mb-4 text-black leading-relaxed">
             🎯 আমাদের কিছু কোর্স এর স্টুডেন্টদের জন্য কোর্স স্পেসিফিক ফেসবুক
             সাপোর্ট গ্রুপ রয়েছে যেখানে আপনি আমাদের সাথে কোর্স রিলেটেড
             (হোমওয়ার্ক, প্র্যাকটিস) আলোচনা করতে পারবেন। আমরা আমাদের টেকনিক্যাল
@@ -49,7 +49,7 @@ const SupportPage: React.FC = () => {
             🎯 সাপোর্ট পাওয়ার সময় নিচের বিষয়গুলো লক্ষ্য রাখতে হবে
           </h2>
 
-          <ul className="list-disc list-inside text-gray-300 space-y-2 leading-relaxed">
+          <ul className="list-disc list-inside text-black space-y-2 leading-relaxed">
             <li>🎯 আপনার ভিডিওগুলো মনোযোগ দিয়ে দেখবেন</li>
             <li>🎯 আপনার ভিডিওগুলো স্কিপ করে করে দেখবেন না</li>
             <li className="leading-relaxed">
@@ -67,7 +67,7 @@ const SupportPage: React.FC = () => {
             </li>
           </ul>
 
-          <h1 className="mt-6 text-gray-300">
+          <h1 className="mt-6 text-black">
             নাম উইথ জুয়েল সাথে আপনার দেখা আবারো হোক
           </h1>
         </div>

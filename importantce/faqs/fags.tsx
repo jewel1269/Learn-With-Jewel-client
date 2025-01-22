@@ -61,7 +61,7 @@ const FAQPage: React.FC = () => {
               <h2 className="text-xl font-semibold text-green-500">
                 {faq.question}
               </h2>
-              <h1 className="mt-2 text-gray-300">{faq.answer}</h1>
+              <h1 className="mt-2 text-black">{faq.answer}</h1>
             </div>
           ))}
         </div>

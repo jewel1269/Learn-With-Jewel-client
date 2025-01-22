@@ -1,7 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { FaMoon, FaSun, FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
+import {
+  FaMoon,
+  FaSun,
+  FaBars,
+  FaTimes,
+  FaCaretDown,
+  FaSearch,
+} from "react-icons/fa";
 import { useState, useEffect } from "react";
 import logo from "@/images/jewel-removebg-preview.png";
 
@@ -9,6 +16,9 @@ const Navbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const [searchResults, setSearchResults] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,14 +34,22 @@ const Navbar: React.FC = () => {
     document.body.classList.toggle("dark", isDarkMode);
   }, [isDarkMode]);
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setSearchResults([searchQuery]);
+      setIsSearchModalOpen(true);
+    }
+  };
+
   return (
     <div
-      className={`w-full lg:sticky top-0 left-0 z-50 transition-all duration-700 ${
+      className={`w-full sticky top-0 left-0 z-50 transition-all duration-700 ${
         isScrolled ? "shadow-md bg-white dark:bg-gray-800" : "bg-transparent"
       }`}
     >
       <div className="lg:px-10">
-        <nav className="border bg-white dark:bg-gray-800 lg:rounded-2xl rounded-xl shadow text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
+        <nav className="border bg-slate-200 shadow-gray-300 dark:bg-gray-800 lg:rounded-full  rounded-xl shadow text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Link href="/">
@@ -52,33 +70,28 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="hidden lg:flex items-center border rounded-3xl lg:w-60 px-4 lg:py-1 bg-gray-100 dark:bg-gray-700 shadow-sm">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-gray-500 dark:text-gray-300"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M11 19a8 8 0 100-16 8 8 0 000 16zm-6-6h12m0 0l-4 4m4-4l-4-4"
-              />
-            </svg>
+          <form
+            onSubmit={handleSearch}
+            className="hidden lg:flex items-center border rounded-3xl lg:w-60 px-4 lg:py-1 bg-gray-100 dark:bg-gray-700 shadow-sm"
+          >
+            <FaSearch className="text-gray-500 dark:text-gray-300" />
             <input
               type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="border-none outline-none bg-transparent w-full ml-2 text-gray-700 dark:text-white placeholder:text-gray-800 dark:placeholder:text-gray-400"
               placeholder="কোর্স সার্চ করুন"
             />
-          </div>
+          </form>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex lg:items-center lg:gap-8">
             <Dropdown
               label="আমাদের সব কোর্স"
-              links={[{ href: "/routes/course", text: "কোর্সের বিস্তারিত" }]}
+              links={[
+                { href: "/routes/course", text: "কোর্সের বিস্তারিত" },
+                { href: "/routes/course/advanced", text: "অ্যাডভান্সড কোর্স" },
+              ]}
             />
             <Dropdown
               label="আমার অ্যাকাউন্ট"
@@ -115,23 +128,19 @@ const Navbar: React.FC = () => {
             {/* Login Button */}
             <Link
               href="/login"
-              className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-4 py-1 rounded-full shadow-md hover:bg-blue-700 transition"
             >
               লগইন
             </Link>
           </div>
 
-          
-
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsDrawerOpen(true)}
-            className="lg:hidden p-2   rounded-full  dark:bg-gray-900"
+            className="lg:hidden p-2 rounded-full dark:bg-gray-900"
           >
-         
             <FaBars className="h-8 w-8" />
           </button>
-          
 
           {/* Drawer */}
           <div
@@ -151,7 +160,13 @@ const Navbar: React.FC = () => {
             <ul className="p-4 space-y-4">
               <MobileDropdown
                 label="আমাদের সব কোর্স"
-                links={[{ href: "/routes/course", text: "কোর্সের বিস্তারিত" }]}
+                links={[
+                  { href: "/routes/course", text: "কোর্সের বিস্তারিত" },
+                  {
+                    href: "/routes/course/advanced",
+                    text: "অ্যাডভান্সড কোর্স",
+                  },
+                ]}
               />
               <MobileDropdown
                 label="আমার অ্যাকাউন্ট"
@@ -184,7 +199,7 @@ const Navbar: React.FC = () => {
               <li>
                 <Link
                   href="/login"
-                  className="block text-center bg-blue-600 text-white py-2 rounded shadow-md"
+                  className="block text-center bg-blue-600 text-white py-1 rounded shadow-md"
                 >
                   লগইন
                 </Link>
@@ -193,6 +208,28 @@ const Navbar: React.FC = () => {
           </div>
         </nav>
       </div>
+
+      {/* Search Modal */}
+      {isSearchModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg w-2/4 md:w-1/2">
+            <button
+              className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full"
+              onClick={() => setIsSearchModalOpen(false)}
+            >
+              <FaTimes />
+            </button>
+            <h2 className="text-lg font-bold mb-4">Search Results</h2>
+            <ul>
+              {searchResults.map((result, index) => (
+                <li key={index} className="p-2 border-b">
+                  {index}. {result}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -229,22 +266,20 @@ const MobileDropdown: React.FC<{
   links: { href: string; text: string }[];
 }> = ({ label, links }) => (
   <li>
-    <div className="relative">
-      <button className="flex items-center gap-1 hover:text-gray-400 transition">
-        {label}
-        <FaCaretDown />
-      </button>
-      <div className="absolute left-0 mt-2 flex flex-col bg-white dark:bg-gray-800 text-black dark:text-white text-sm rounded shadow-lg z-10">
-        {links.map(({ href, text }) => (
-          <Link
-            href={href}
-            key={href}
-            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
-          >
-            {text}
-          </Link>
-        ))}
-      </div>
+    <button className="flex items-center gap-1 hover:text-gray-400 transition">
+      {label}
+      <FaCaretDown />
+    </button>
+    <div className="mt-2 flex flex-col  bg-white dark:bg-gray-800 text-black dark:text-white text-sm rounded shadow-lg">
+      {links.map(({ href, text }) => (
+        <Link
+          href={href}
+          key={href}
+          className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+        >
+          {text}
+        </Link>
+      ))}
     </div>
   </li>
 );
