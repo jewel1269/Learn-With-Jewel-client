@@ -157,21 +157,24 @@ const TutorialsSection: React.FC = () => {
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white shadow-md border rounded-lg overflow-hidden"
+              className="bg-white shadow-md border rounded-lg overflow-hidden hover:shadow-xl hover:border hover:border-gray-400 hover:scale-105 transform transition-all duration-300 ease-in-out"
             >
               {/* Image */}
               <div
-                className="lg:h-36 h-20 bg-cover bg-center"
+                className="relative lg:h-36 h-20 bg-cover bg-center group"
                 style={{ backgroundImage: `url(${course.image})` }}
                 aria-label={course.title}
-              ></div>
+              >
+                {/* Overlay effect on hover */}
+                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
               {/* Content */}
               <div className="p-4">
                 <h3 className="lg:text-lg text-sm font-semibold">
                   {course.title}
                 </h3>
                 <p className="text-xs text-gray-500">{course.subtitle}</p>
-                <div className="lg:text-sm text-xs  text-gray-700 mt-2">
+                <div className="lg:text-sm text-xs text-gray-700 mt-2">
                   <p>সময়কাল: {course.duration}</p>
                   <p>আসন সংখ্যা: {course.seats}</p>
                   <p>{course.batch}</p>
@@ -190,7 +193,7 @@ const TutorialsSection: React.FC = () => {
         {/* See More Button */}
         <div className="mt-8 flex justify-center text-center">
           <Link href={"/routes/course"}>
-            <button className="px-6 flex justify-center gap-2 items-center py-2 bg-transparent transition duration-200 bg-gray-400 text-black rounded-md hover:bg-yellow-400">
+            <button className="px-6 flex justify-center gap-2 items-center py-2 bg-transparent transition duration-200 border rounded-xl text-black  hover:bg-yellow-400">
               সব দেখুন <FaArrowTrendUp />
             </button>
           </Link>

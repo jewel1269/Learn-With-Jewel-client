@@ -41,7 +41,6 @@ const Navbar: React.FC = () => {
       setIsSearchModalOpen(true);
     }
   };
-
   return (
     <div
       className={`w-full sticky top-0 left-0 z-50 transition-all  duration-700 ${
@@ -71,7 +70,7 @@ const Navbar: React.FC = () => {
 
           {/* Search Bar */}
           <form
-            onSubmit={handleSearch}
+            onChange={handleSearch}
             className="hidden lg:flex items-center border rounded-3xl lg:w-60 px-4 lg:py-1 bg-gray-100 dark:bg-gray-700 shadow-sm"
           >
             <FaSearch className="text-gray-500 dark:text-gray-300" />
@@ -85,16 +84,16 @@ const Navbar: React.FC = () => {
           </form>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex lg:items-center lg:gap-8">
+          <div className="hidden lg:flex lg:items-center hover:alert-info lg:gap-8">
             <Dropdown
-              label="আমাদের সব কোর্স"
+              label="কোর্স"
               links={[
                 { href: "/routes/course", text: "কোর্সের বিস্তারিত" },
                 { href: "/routes/course/advanced", text: "অ্যাডভান্সড কোর্স" },
               ]}
             />
             <Dropdown
-              label="আমার অ্যাকাউন্ট"
+              label="অ্যাকাউন্ট"
               links={[
                 { href: "/routes/userProfile", text: "প্রোফাইল" },
                 { href: "/routes/userProfile/cart", text: "আমার কার্ট" },

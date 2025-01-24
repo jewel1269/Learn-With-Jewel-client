@@ -11,7 +11,7 @@ const Banner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* Left Content */}
           <div>
-            <h1 className="text-3xl font-bold flex items-center gap-2  text-black">
+            <h1 className="text-3xl font-bold flex items-center gap-2 text-black">
               বাংলাদেশ শিখবে <span className="text-yellow-400">লাইভ</span>{" "}
               <span className="loading text-red-500 font-bold loading-ring loading-lg"></span>
             </h1>
@@ -26,7 +26,7 @@ const Banner = () => {
             <p className="text-black text-sm mt-4">
               ১০+ গ্রাজুয়েটরা কাজ করছে বিভিন্ন দেশি ও বিদেশি প্রতিষ্ঠানে:
             </p>
-            <div className="flex flex-col  lg:mt-8 divide-y-2">
+            <div className="flex flex-col lg:mt-8 divide-y-2">
               <div className="flex space-x-4">
                 <Link
                   href="https://facebook.com"
@@ -64,14 +64,18 @@ const Banner = () => {
             </div>
           </div>
 
-          {/* Right Content */}
-          <div className="relative bg-gradient-to-br from-gray-400 via-gray-300 to-gray-200 h-72 lg:h-80 rounded-md shadow-md">
-            <Image
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfy6UUJ38VnmN10F_ZYXn65OOCfNgMtkcs8Q&s"
-              alt="A banner image showcasing learning opportunities"
-              fill
-              className="object-cover bg-cover rounded-2xl shadow"
-            />
+          {/* Right Content with 3D Effect */}
+          <div className="relative perspective-1000">
+            <div className="transform-style-3d hover:rotate-y-6 hover:scale-105 transition-all duration-500">
+              <div className="relative bg-gradient-to-br from-gray-400 via-gray-300 to-gray-200 h-72 lg:h-80 rounded-md shadow-md">
+                <Image
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfy6UUJ38VnmN10F_ZYXn65OOCfNgMtkcs8Q&s"
+                  alt="A banner image showcasing learning opportunities"
+                  fill
+                  className="object-cover bg-cover rounded-2xl shadow"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

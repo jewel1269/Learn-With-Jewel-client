@@ -110,11 +110,11 @@ const CoursesGrid = () => {
         <h1 className="lg:text-4xl text-3xl font-bold text-center mb-10">
           প্রিমিয়াম <span className="text-green-500">কোর্সসমূহ</span>
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
           {courses.map((course) => (
             <article
               key={course.id}
-              className="shadow-md border bg-white rounded-xl  flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-lg"
+              className="shadow-md border bg-white rounded-xl hover:border hover:border-gray-400 flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-lg"
             >
               <div>
                 <div className="flex justify-center">

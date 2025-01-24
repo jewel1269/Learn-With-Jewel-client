@@ -42,16 +42,29 @@ const Footer = () => {
         </div>
 
         {/* Payment Methods */}
-        <div className="w-full flex justify-center  mx-auto mt-4">
-          <Image
-            src={payment}
-            alt="payment"
-            width={1000}
-            height={1000}
-            className=" object-cover lg:h-[140px] lg:w-[1200px] w-full"
-          />
-        </div>
+        <div className="flex justify-center items-center">
+          <div className="mt-8 text-center">
+            <p className="text-sm md:text-base">
+              ঠিকানা: উত্তরা সেক্টর-১০, ঢাকা, বাংলাদেশ
+            </p>
+            <p className="text-sm md:text-base">ফোন: +৮৮০১১২৩৪৫৬৭৮৯</p>
+            <p className="text-sm md:text-base">
+              ইমেইল: info@learnwithjewel.com
+            </p>
+          </div>
 
+          <div className="w-full flex justify-center mx-auto mt-4">
+            <Image
+              src={payment}
+              alt="payment"
+              width={800}
+              height={800}
+              className="object-cover lg:h-[120px] lg:w-[1000px] w-full"
+            />
+          </div>
+
+          {/* Address and Contact Information */}
+        </div>
         {/* Social Icons */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
@@ -73,7 +86,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="mt-3 text-center text-sm text-red-500">
-          <h1>কপিরাইট © 2025 লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</h1>
+          <h1>কপিরাইট © ২০২৫ লার্ন উইথ জুয়েল। সর্বস্বত্ব সংরক্ষিত।</h1>
         </div>
       </div>
     </footer>

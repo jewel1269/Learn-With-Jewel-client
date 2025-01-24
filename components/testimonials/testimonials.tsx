@@ -1,5 +1,8 @@
+"use client"
 import React from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const testimonials = [
   {
@@ -53,23 +56,54 @@ const testimonials = [
 ];
 
 const Testimonials: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="">
-      <div className="text-black px-8 max-w-[1450px] mx-auto flex flex-col justify-center md:px-16 ">
-        <h2 className="text-center text-3xl md:text-4xl font-bold ">
+    <motion.div ref={ref}>
+      <div className="text-black px-8 max-w-[1450px] lg:mt-10 mx-auto flex flex-col justify-center md:px-16">
+        <motion.h2
+          className="text-center text-3xl md:text-4xl font-bold"
+          initial={{ y: 50, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8 }}
+        >
           <span className="text-green-500">লার্নাররা</span> আমাদের সম্পর্কে যা
           ভাবেন
-        </h2>
-        <h1 className="text-center ">
+        </motion.h2>
+        <motion.h1
+          className="text-center"
+          initial={{ y: 50, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 1 }}
+        >
           লার্নাররা সর্বদাই লার্ন উইথ জুয়েল এর প্রতি তাদের ভালোবাসা প্রকাশ
           করেছেন
-        </h1>
-        <div className="bg-gray-50   sm:px-6 lg:px-8">
-          <div className="mt-10 grid gap-6 lg:grid-cols-3 sm:grid-cols-2">
+        </motion.h1>
+        <div className="bg-gray-50 sm:px-6 lg:px-8">
+          <motion.div
+            className="mt-10 grid gap-6 lg:grid-cols-3 sm:grid-cols-2"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+          >
             {testimonials.map((testimonial, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-white shadow-md rounded-lg p-6 flex flex-col"
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 },
+                }}
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-lg font-semibold">
@@ -83,17 +117,22 @@ const Testimonials: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-gray-700">{testimonial.text}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-      <div className="mt-8 flex mb-4 justify-center text-center">
-        <button className="px-6 flex justify-center gap-2 items-center py-2 bg-gray-400 text-black bg-transparent transition duration-200 rounded-md hover:bg-yellow-400">
+      <motion.div
+        className="mt-8 flex mb-4 justify-center text-center"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={isInView ? { scale: 1, opacity: 1 } : {}}
+        transition={{ duration: 0.8 }}
+      >
+        <button className="px-6 flex justify-center gap-2 items-center py-2 border text-black bg-transparent transition duration-200 rounded-xl hover:bg-yellow-400">
           সব দেখুন <FaArrowTrendUp />
         </button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
