@@ -106,7 +106,7 @@ const Testimonials: React.FC = () => {
                 }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-lg font-semibold">
+                  <div className="w-12 h-12 border bg-indigo-500 text-white rounded-full flex items-center justify-center text-lg font-semibold">
                     {testimonial.initials}
                   </div>
                   <div>

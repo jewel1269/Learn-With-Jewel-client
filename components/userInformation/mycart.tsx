@@ -32,7 +32,7 @@ const products = [
 const MyCart = () => {
   const [cartItems, setCartItems] = useState(products);
 
-  const updateQuantity = (id:any, action:any) => {
+  const updateQuantity = (id, action) => {
     const updatedCart = cartItems.map((item) =>
       item.id === id
         ? {
@@ -99,7 +99,7 @@ const MyCart = () => {
             </div>
           ))}
           <button className="mt-6 text-blue-600 hover:underline">
-            ← Continue Shopping
+            ← Continue Learning
           </button>
         </div>
 

@@ -3,32 +3,36 @@ import React from "react";
 
 const CourseFeatures: React.FC = () => {
   return (
-    <div className="bg-gray-50 py-12">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold">কোর্সে আপনি পাচ্ছেন</h2>
-        <div className="flex justify-center mt-2">
-          <div className="w-24 h-1 bg-yellow-500"></div>
-        </div>
-      </div>
-
-      {/* Features Grid */}
-      <div className="container mx-auto grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 gap-6">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center"
-          >
-            <div
-              className={`w-16 h-16 mb-4 rounded-full flex items-center justify-center ${feature.iconBg}`}
-            >
-              {feature.icon}
-            </div>
-            <h3 className="lg:text-2xl text-sm md:text-xl font-semibold text-gray-800 mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 text-sm">{feature.description}</p>
+    <div className="flex flex-col justify-center ">
+      <div className="bg-gray-50 py-12 ">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            কোর্সে আপনি পাচ্ছেন
+          </h2>
+          <div className="flex justify-center mt-2">
+            <div className="w-24 h-1 bg-yellow-500"></div>
           </div>
-        ))}
+        </div>
+
+        {/* Features Grid */}
+        <div className="container mx-auto grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center"
+            >
+              <div
+                className={`w-16 h-16 mb-4 rounded-full flex items-center justify-center ${feature.iconBg}`}
+              >
+                {feature.icon}
+              </div>
+              <h3 className="lg:text-2xl text-sm md:text-xl font-semibold text-gray-800 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

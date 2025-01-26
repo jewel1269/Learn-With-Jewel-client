@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="lg:px-10 ">
-        <nav className="border bg-slate-200 shadow-gray-300 dark:bg-gray-800 lg:rounded-full lg:h-12 lg:mt-2   rounded-xl shadow-2xl text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
+        <nav className="border bg-white shadow-gray-300 dark:bg-gray-800 lg:rounded-full lg:h-12 lg:mt-2   rounded-xl shadow-2xl text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center  gap-2">
             <Link href="/">
@@ -71,14 +71,14 @@ const Navbar: React.FC = () => {
           {/* Search Bar */}
           <form
             onChange={handleSearch}
-            className="hidden lg:flex items-center border rounded-3xl lg:w-60 px-4 lg:py-1 bg-gray-100 dark:bg-gray-700 shadow-sm"
+            className="hidden lg:flex items-center border rounded-3xl hover:border hover:border-gray-400 lg:w-60 px-4 lg:py-1 bg-gray-100 dark:bg-gray-700 shadow-sm"
           >
             <FaSearch className="text-gray-500 dark:text-gray-300" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="border-none outline-none bg-transparent w-full ml-2 text-gray-700 dark:text-white placeholder:text-gray-800 dark:placeholder:text-gray-400"
+              className="border-none outline-none bg-transparent w-full ml-2  text-gray-700 dark:text-white placeholder:text-gray-800 dark:placeholder:text-gray-400"
               placeholder="কোর্স সার্চ করুন"
             />
           </form>
