@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaCode, FaJsSquare, FaNode, FaReact, FaVideo } from "react-icons/fa";
+import { FaCode, FaJsSquare, FaNode, FaReact } from "react-icons/fa";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
 const TutorialsSection: React.FC = () => {

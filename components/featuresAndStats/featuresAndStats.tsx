@@ -6,12 +6,12 @@ const FeaturesAndStats = () => {
   const [completionRate, setCompletionRate] = useState(0);
   const [liveCourses, setLiveCourses] = useState(0);
 
-  const stats = [
+  const stats = React.useMemo(() => [
     { target: 100, setValue: setJobPlacement, label: "জব প্লেসমেন্ট" },
     { target: 500, setValue: setLearners, label: "লার্নার" },
     { target: 90, setValue: setCompletionRate, label: "কোর্স কম্প্লিশন রেট" },
     { target: 90, setValue: setLiveCourses, label: "লাইভ কোর্স" },
-  ];
+  ], []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +36,7 @@ const FeaturesAndStats = () => {
     }, 50); // Adjust speed here
 
     return () => clearInterval(interval);
-  }, [jobPlacement, learners, completionRate, liveCourses]);
+  }, [jobPlacement, learners, completionRate, liveCourses, stats]);
 
   return (
     <section className=" py-10">
