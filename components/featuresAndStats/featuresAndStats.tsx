@@ -41,7 +41,7 @@ const FeaturesAndStats = () => {
   return (
     <section className=" py-10">
       {/* Features Section */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container mx-auto px-6">
         <h2 className="text-2xl font-bold text-center mb-6">
           কি কি পাচ্ছেন লাইভ কোর্সে
         </h2>
@@ -69,7 +69,7 @@ const FeaturesAndStats = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="max-w-7xl mx-auto px-6 mt-10">
+      <div className="container mx-auto px-6 mt-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4 text-center">
           {[
             { stat: jobPlacement, label: "জব প্লেসমেন্ট" },

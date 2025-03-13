@@ -61,7 +61,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <motion.div ref={ref}>
-      <div className="text-black px-8 max-w-[1450px] lg:mt-10 mx-auto flex flex-col justify-center md:px-16">
+      <div className="container text-black px-8 lg:mt-10 mx-auto flex flex-col justify-center ">
         <motion.h2
           className="text-center text-3xl md:text-4xl font-bold"
           initial={{ y: 50, opacity: 0 }}

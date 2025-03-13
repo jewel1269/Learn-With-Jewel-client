@@ -5,9 +5,9 @@ import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <div className="font-sans flex justify-center items-center lg:mt-10">
+    <div className=" font-serif flex justify-center items-center lg:mt-10">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-rose-50 via-white to-red-100 lg:w-[1250px] py-8 px-6 lg:px-20 lg:border border-black rounded-2xl max-w-8xl shadow-lg">
+      <div className="bg-gradient-to-r from-rose-50 via-white to-red-100 lg:w-[1400px] md:w-full py-8 px-6 lg:px-20 lg:border border-black rounded-2xl max-w-8xl shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* Left Content */}
           <div>

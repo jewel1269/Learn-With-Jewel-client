@@ -1,24 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaMoon,
-  FaSun,
-  FaBars,
-  FaTimes,
-  FaCaretDown,
-  FaSearch,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import logo from "@/images/jewel-removebg-preview.png";
+
 
 const Navbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
-  const [searchResults, setSearchResults] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,35 +19,24 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    document.body.classList.toggle("dark", isDarkMode);
-  }, [isDarkMode]);
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      setSearchResults([searchQuery]);
-      setIsSearchModalOpen(true);
-    }
-  };
   return (
     <div
       className={`w-full sticky top-0 left-0 z-50 transition-all  duration-700 ${
-        isScrolled ? "shadow-md bg-white dark:bg-gray-800" : "bg-transparent"
+        isScrolled ? "shadow-md  dark:bg-gray-800" : "bg-transparent"
       }`}
     >
-      <div className="lg:px-10 ">
-        <nav className="border bg-white shadow-gray-300 dark:bg-gray-800 lg:rounded-full lg:h-12 lg:mt-2   rounded-xl shadow-2xl text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
+      <div className=" ">
+        <nav className="border bg-white shadow-gray-300 dark:bg-gray-800 lg:h-12 lg:mt-2    shadow-2xl text-black dark:text-white lg:px-44 sm:px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center  gap-2">
             <Link href="/">
               <span className="flex items-center gap-2 cursor-pointer">
                 <Image
-                  src={logo}
+                  src={"https://static.vecteezy.com/system/resources/previews/053/738/743/non_2x/3d-icon-avatar-a-cartoon-boy-is-reading-a-book-student-school-concept-of-education-learning-png.png"}
                   alt="Learn with Jewel Logo"
-                  className="h-16 w-16"
-                  width={400}
-                  height={400}
+                  className="h-10 w-10"
+                  width={200}
+                  height={200}
                 />
                 <span className="font-semibold text-sm md:text-base">
                   Learn <br />
@@ -67,21 +45,6 @@ const Navbar: React.FC = () => {
               </span>
             </Link>
           </div>
-
-          {/* Search Bar */}
-          <form
-            onChange={handleSearch}
-            className="hidden lg:flex items-center border rounded-3xl hover:border hover:border-gray-400 lg:w-60 px-4 lg:py-1 bg-gray-100 dark:bg-gray-700 shadow-sm"
-          >
-            <FaSearch className="text-gray-500 dark:text-gray-300" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="border-none outline-none bg-transparent w-full ml-2  text-gray-700 dark:text-white placeholder:text-gray-800 dark:placeholder:text-gray-400"
-              placeholder="কোর্স সার্চ করুন"
-            />
-          </form>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex lg:items-center hover:alert-info lg:gap-8">
@@ -96,7 +59,6 @@ const Navbar: React.FC = () => {
               label="অ্যাকাউন্ট"
               links={[
                 { href: "/routes/userProfile", text: "প্রোফাইল" },
-                { href: "/routes/userProfile/cart", text: "আমার কার্ট" },
               ]}
             />
             <Dropdown
@@ -114,18 +76,6 @@ const Navbar: React.FC = () => {
             <Link href="/routes/jewel" className="text-sm font-bold">
               প্রতিষ্ঠাতা
             </Link>
-
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-1 rounded-full bg-gray-200 border border-slate-400 dark:bg-gray-700 shadow-md hover:scale-105 transition"
-            >
-              {isDarkMode ? (
-                <FaSun className="text-blue-500" />
-              ) : (
-                <FaMoon className=" text-yellow-400" />
-              )}
-            </button>
 
             {/* Login Button */}
             <Link
@@ -186,18 +136,7 @@ const Navbar: React.FC = () => {
                   { href: "/routes/faq", text: "প্রশ্নোত্তর" },
                 ]}
               />
-              <li className="text-center">
-                <button
-                  onClick={() => setIsDarkMode(!isDarkMode)}
-                  className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 shadow-md hover:scale-105 transition"
-                >
-                  {isDarkMode ? (
-                    <FaSun className="text-yellow-400" />
-                  ) : (
-                    <FaMoon className="text-blue-500" />
-                  )}
-                </button>
-              </li>
+
               <li>
                 <Link
                   href="/routes/login"
@@ -210,28 +149,6 @@ const Navbar: React.FC = () => {
           </div>
         </nav>
       </div>
-
-      {/* Search Modal */}
-      {isSearchModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg w-2/4 md:w-1/2">
-            <button
-              className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full"
-              onClick={() => setIsSearchModalOpen(false)}
-            >
-              <FaTimes />
-            </button>
-            <h2 className="text-lg font-bold mb-4">Search Results</h2>
-            <ul>
-              {searchResults.map((result, index) => (
-                <li key={index} className="p-2 border-b">
-                  {index}. {result}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

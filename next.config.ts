@@ -12,7 +12,8 @@ const nextConfig = {
       "cdn-icons-png.freepik.com",
       "cdn-icons-png.flaticon.com",
       "images.unsplash.com",
-      "i.ibb.co.com"
+      "i.ibb.co.com",
+      "static.vecteezy.com"
     ],
   },
   reactStrictMode: true,

@@ -227,7 +227,7 @@ const TutorialsSection: React.FC = () => {
 
   return (
     <section className="py-12">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center justify-center">
@@ -236,68 +236,105 @@ const TutorialsSection: React.FC = () => {
               আপকামিং লাইভ কোর্স
             </h2>
           </div>
-          <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 py-4">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md flex-shrink-0 ${
-                  index === 0
-                    ? "bg-blue-500 text-white hover:bg-blue-600"
-                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                }`}
-              >
-                {category.icon}
-                <div>
-                  <span>{category.title}</span>
-                  <br />
-                  <span>👁️‍🗨️{category.totalCourses} কোর্স</span>
-                </div>
-              </button>
-            ))}
+          <div className="flex justify-center">
+            <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 py-4 max-w-[90vw]">
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-md flex-shrink-0 ${
+                    index === 0
+                      ? "bg-blue-500 text-white hover:bg-blue-600"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  }`}
+                >
+                  {category.icon}
+                  <div>
+                    <span>{category.title}</span>
+                    <br />
+                    <span>👁️‍🗨️{category.totalCourses} কোর্স</span>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Course Cards */}
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6">
           {courses.map((course, index) => (
-           <Link href={`/details/courseDetails/${course.id}`} key={index}>
             <div
               key={index}
-              className="bg-white shadow-md border rounded-lg overflow-hidden hover:shadow-xl hover:border hover:border-gray-400 hover:scale-105 transform transition-all duration-300 ease-in-out"
+              className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transform transition-all duration-300 ease-in-out"
             >
-              {/* Image */}
+              {/* Image Section */}
               <div
-                className="relative lg:h-36 h-20 bg-cover bg-center group"
+                className="relative h-48 bg-cover bg-center group"
                 style={{ backgroundImage: `url(${course.image})` }}
-                aria-label={course.title}
               >
-                {/* Overlay effect on hover */}
-                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-yellow-500 text-white py-1 rounded-full text-sm">
+                      {course.status}
+                    </span>
+                  </div>
+                </div>
               </div>
-              {/* Content */}
-              <div className="p-4">
-                <h3 className="lg:text-lg text-sm font-semibold">
+
+              {/* Content Section */}
+              <div className="px-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
                   {course.title}
                 </h3>
-                <p className="text-xs text-gray-500">{course.category}</p>
-                <div className="lg:text-sm text-xs text-gray-700 mt-2">
-                  <p>সময়কাল: {course.duration}</p>
-                  <p>আসন সংখ্যা: {course.seats}</p>
-                  <p>{course.batch}</p>
+                <p className="text-gray-600 text-sm mb-4">
+                  {course.description}
+                </p>
+
+                {/* Course Details */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-gray-700">
+                    <span className="text-sm">
+                      🕒 সময়কালঃ {course.duration}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <span className="text-sm">
+                      👥 আসন সংখ্যাঃ {course.seats}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <span className="text-sm">💰 কোর্স ফিঃ {course.price}</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <span className="text-sm">📚 {course.live_classes}</span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center mt-4">
-                  <button className="flex items-center w-full justify-center gap-2 text-black lg:text-lg border border-gray-300 bg-slate-100  text-center font-medium px-3  rounded-md hover:bg-gray-200 transition duration-200">
-                    <FaVideo className="text-md" />
-                    <span className="text-sm">{course.view_video}</span>
+
+                {/* Batch Info */}
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-sm text-gray-600">
+                    {course.batch_start_date}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {course.live_class_time}
+                  </p>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col gap-2">
+                  <Link href={`/details/courseDetails/${course.id}`}>
+                    <button className="w-full bg-blue-500 text-white py-1 rounded-lg hover:bg-blue-600 transition duration-300">
+                      বিস্তারিত দেখুন
+                    </button>
+                  </Link>
+                  <button className="w-full mb-2 border-2 border-yellow-500 text-gray-800 py-1 rounded-lg hover:bg-yellow-500 hover:text-white transition duration-300">
+                    ভর্তি হন
                   </button>
                 </div>
               </div>
             </div>
-           </Link>
           ))}
         </div>
- 
 
         {/* See More Button */}
         <div className="mt-8 flex justify-center text-center">
